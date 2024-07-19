@@ -1,0 +1,96 @@
+.navbar-header {
+    width: 100%;
+    max-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease;
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-actions a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+    font-size: 1.5625rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-actions a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #209DD5;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar-actions a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-actions a:hover {
+    color: #209DD5;
+}
+
+
+.navbar-button {
+    width: 175px;
+    text-align: center;
+}
+
+.navbar-login-button {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 1.25rem;
+
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.281),
+        5px 5px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+
+    transition: color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.navbar-login-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #209DD5;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar-login-button:hover {
+    border-color: #209DD5;
+    color: #fff;
+}
+
+.navbar-login-button:hover::before {
+    transform: scaleX(1);
+}
