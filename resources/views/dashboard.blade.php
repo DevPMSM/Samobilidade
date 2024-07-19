@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-@include('components/sidebar')
+@include('components/sidebar-admin')
 
 <h1>LOGADO</h1>
 <!-- Authentication -->
