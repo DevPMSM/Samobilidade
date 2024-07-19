@@ -1,11 +1,9 @@
+<link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+
+
 <h1>LOGADO</h1>
 <!-- Authentication -->
 <form method="POST" action="{{ route('logout') }}">
     @csrf
-
-    <x-dropdown-link :href="route('logout')"
-            onclick="event.preventDefault();
-                        this.closest('form').submit();">
-        {{ __('Log Out') }}
-    </x-dropdown-link>
+    <button type="submit">Deslogar</button>
 </form>
