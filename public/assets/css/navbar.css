@@ -1,0 +1,214 @@
+/* General Styles */
+.navbar-header {
+    width: 100%;
+    max-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    /* Allow the container to grow */
+    justify-content: center;
+    /* Center items horizontally */
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-items a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+    font-size: 1.5625rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-items a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #209DD5;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar-items a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-items a:hover {
+    color: #209DD5;
+}
+
+.navbar-button {
+    width: 175px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-login-button {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.281),
+        5px 5px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.navbar-login-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #209DD5;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar-login-button:hover {
+    border-color: #209DD5;
+    color: #fff;
+}
+
+.navbar-login-button:hover::before {
+    transform: scaleX(1);
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.sidebar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #dadada;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 3rem 1.5rem;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+.sidebar-item {
+    padding: 1rem;
+}
+
+.sidebar-item a,
+.sidebar-item .navbar-login-button {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar-logo {
+    display: flex;
+    width: 90px;
+    height: 90px;
+}
+
+.sidebar-item-close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .navbar-button {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar-header {
+        padding: 2.5rem;
+    }
+
+    .navbar-logo {
+        width: 135px;
+    }
+
+    .navbar-actions,
+    .navbar-button {
+        display: none;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+}
