@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<!-- COMPONENTE DA NAVBAR -->
 <body>
     
     <header class="navbar-header">
@@ -34,6 +36,8 @@
                 sort
             </span>
         </button>
+        
+        <!-- ESTRUTURA NAVBAR NO MOBILE -->
         <aside id="sidebar" class="sidebar">
         <nav class="sidebar-nav">
             <ul class="sidebar-list">
