@@ -35,7 +35,7 @@ class NoticiaController extends Controller
             'titulo' => 'required|mas:255',
             'subtitulo' => 'required|mas:255',
             'texto' => 'required|mas:255',
-            'imagem' => 'required',
+            'imagem',
         ]);
 
         Noticia::create($request->all());
