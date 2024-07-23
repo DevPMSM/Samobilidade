@@ -1,5 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}"> 
+    <title>@yield('title', 'Samobilidade')</title>
+</head>
+<!-- HTML BASE PARA A TELA PRINCIPAL, A ESTRUTURA SEGUE ESSES PADRÕES
+PARA NÃO QUEBRAR A TELA -->
+<body>
+    <div class="container">
+        @include('components/navbar')
 
-<link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+        <!-- NORMALMENTE O CONTEUDO DA PAGINA VAI SER COLOCADO DENTRO
+        DA MAIN PARA SER MOSTRADO E SE PRECISAR DE OUTRO ITEM, NO COMPONENTE -->
+        <main>
+            
+            @yield('content')
+            <div>Teste da index</div>
 
-@include('components/navbar')
-@include('components/footer')
+        </main>
+
+        @include('components/footer')
+    </div>
+</body>

@@ -192,6 +192,11 @@
     .navbar-button {
         max-width: 90px;
     }
+
+    .navbar-login-button {
+        font-size: 16px;
+        padding: 0.25rem;
+    }
 }
 
 @media (max-width: 900px) {
