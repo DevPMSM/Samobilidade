@@ -1,7 +1,14 @@
+/* ESTILIZAÇÃO DA TELA PRINCIPAL DO DASHBOARD ADMIN */
+
 main {
     display: flex;
+    flex: 1;
 }
 
-.footer {
-    width: 100%;
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+.dashboard {}

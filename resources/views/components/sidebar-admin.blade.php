@@ -3,10 +3,14 @@
 <link rel="stylesheet" href="{{ asset('assets/css/sidebar-admin-component.css') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
+<!-- COMPONENTE DA SIDEBAR USADO NO DASHBOARD ADMIN  -->
 <body>
+    <!-- BOTAO PARA ABRIR SIDEBAR NO MOBILE -->
     <button id="sidebarToggle" class="sidebar-toggle-btn">
         <span class="material-symbols-outlined" style="font-size: 35px;">menu</span>
     </button>
+
+    <!-- SIDEBAR  -->
     <aside id="sidebar" class="sidebar">
         <header class="sidebar-header">
             <h1 class="sidebar-name-title">{{ $user->name }}</h1>
@@ -36,10 +40,12 @@
     </aside>
 
     <script>
+    // EVENTO AO CLICAR NO BOTÃO DO MENU DA SIDEBAR
     document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('sidebar');
         const toggleButton = document.getElementById('sidebarToggle');
 
+        // AO CLICK, ADICIONA OU REMOVE A CLASSE SHOW
         toggleButton.addEventListener('click', function() {
             if (sidebar.classList.contains('show')) {
                 sidebar.classList.remove('show');
