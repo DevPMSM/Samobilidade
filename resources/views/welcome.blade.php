@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}"> 
     <title>@yield('title', 'Samobilidade')</title>
 </head>
+<!-- Remover comentarios antes de subir  -->
 <!-- HTML BASE PARA A TELA PRINCIPAL, A ESTRUTURA SEGUE ESSES PADRÕES
 PARA NÃO QUEBRAR A TELA -->
 <body>

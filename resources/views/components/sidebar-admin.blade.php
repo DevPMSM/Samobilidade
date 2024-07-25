@@ -12,34 +12,41 @@
 
     <!-- SIDEBAR  -->
     <aside id="sidebar" class="sidebar">
-        <header class="sidebar-header">
-            <h1 class="sidebar-name-title">{{ $user->name }}</h1>
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button class="sidebar-btn" type="submit">
-                    <span class="material-symbols-outlined" style="font-size: 35px;">login</span>
-                    Sair
-                </button>
-            </form>
-        </header>
-        <hr>
-        <ul class="sidebar-table">
-            <li class="sidebar-table-list">
-                <a href="#" class="sidebar-table-item">
-                    <span class="material-symbols-outlined" style="font-size: 35px;">newspaper</span>
-                    Notícias
-                </a>
-            </li>
-            <li class="sidebar-table-list">
-                <a href="#" class="sidebar-table-item">
-                    <span class="material-symbols-outlined" style="font-size: 35px;">balance</span>
-                    Legislação
-                </a>
-            </li>
-        </ul>
-    </aside>
-
-    <script>
+        <div class="sidebar-container">
+            <header class="sidebar-header">
+                <h1 class="sidebar-name-title">{{ $user->name }}</h1>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button class="sidebar-btn" type="submit">
+                        <span class="material-symbols-outlined" style="font-size: 35px;">login</span>
+                        Sair
+                    </button>
+                </form>
+            </header>
+            <hr>
+            <ul class="sidebar-table">
+                <li class="sidebar-table-list">
+                    <a href="#" class="sidebar-table-item">
+                        <span class="material-symbols-outlined" style="font-size: 35px;">newspaper</span>
+                        Notícias
+                    </a>
+                </li>
+                <li class="sidebar-table-list">
+                    <a href="#" class="sidebar-table-item">
+                        <span class="material-symbols-outlined" style="font-size: 35px;">balance</span>
+                        Legislação
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+            <a href="/" class="sidebar-btn">
+                <span class="material-symbols-outlined" style="font-size: 35px;">arrow_back</span>
+                Voltar
+            </a>
+        </aside>
+        
+        <script>
     // EVENTO AO CLICAR NO BOTÃO DO MENU DA SIDEBAR
     document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('sidebar');
