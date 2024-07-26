@@ -6,16 +6,31 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Noticia;
 
-
 class NoticiaController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $noticias = Noticia::all();
-        return view('noticias.noticia_index', compact("noticias"));
+        //$noticias = Noticia::all();
+        //$noticias = Noticia::paginate(5);
+
+        $query = Noticia::query();
+
+        //busca por palavra chave
+        if($request->has('search')){
+            $search = $request->get('search');
+            $query->where('titulo', 'LIKE', "%$search%")
+                ->orWhere('subtitulo', 'LIKE', "%$search%")
+                ->orWhere('texto', 'LIKE', "%$search%");
+        }
+
+        $noticias = $query->paginate(5);
+    
+
+        return view('noticias.noticia_index', compact("noticias"))->with('noticias', $noticias);
     }
 
     /**
@@ -32,10 +47,10 @@ class NoticiaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo' => 'required|mas:255',
-            'subtitulo' => 'required|mas:255',
-            'texto' => 'required|mas:255',
-            'imagem',
+            'titulo' => 'required|max:255',
+            'subtitulo' => 'required|max:255',
+            'texto' => 'required|max:255',
+            'imagem' => 'required',
         ]);
 
         Noticia::create($request->all());
@@ -64,26 +79,26 @@ class NoticiaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         $request->validate([
-            'titulo' => 'required|mas:255',
-            'subtitulo' => 'required|mas:255',
-            'texto' => 'required|mas:255',
-            'imagem' => 'required',
+            'titulo' => 'required|max:255',
+            'subtitulo' => 'required|max:255',
+            'texto' => 'required|max:255',
+            'imagem',
         ]);
 
         $noticia = Noticia::find($id);
         $noticia->update($request->all());
 
-        return redirect()->route('noticias')
-        ->with('success', 'noticia atualizada com sucesso');
+
+        return redirect()->route('noticias')->with('success', 'noticia atualizada com sucesso');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         $noticia = Noticia::find($id);
 
@@ -91,8 +106,8 @@ class NoticiaController extends Controller
             return redirect()->route('noticias')->with('error', 'Noticia não encontrada.');
         }
     
-        $secretaria->delete();
-    
+        $noticia->delete();
+
         return redirect()->route('noticias')->with('success','Noticia deletada com sucesso.');
     
     }

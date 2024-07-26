@@ -12,7 +12,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/noticia/{noticias}/edit', [NoticiaController::class, 'edit'])->name('editar_noticia');
     Route::post('/noticia', [NoticiaController::class, 'store'])->name('noticias.store');
     Route::put('/noticia/{noticias}', [NoticiaController::class, 'update'])->name('noticia.update');
-    Route::delete('/noticia/{noticias}', [NoticiaController::class, 'destroy'])->name('noticia.destroy');
+    Route::delete('/noticia/{noticias}', [NoticiaController::class, 'destroy'])->name('noticia_destroy');
 });
 
 

@@ -157,6 +157,7 @@ input::placeholder{
 .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10;
 
     margin-top: 250;

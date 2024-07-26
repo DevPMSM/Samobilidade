@@ -11,24 +11,42 @@
 
         <div class="divForm">
             <form class="form" action="{{ route('noticias.store')}}" method="post" id="noticiaForm">
+                @csrf
                 <input type="text" id="titulo" name="titulo" placeholder="Título"><br>
                 <input type="text" id="subtitulo" name="subtitulo" placeholder="Subtítulo"><br>
-                <input type="text" id="desc" name="desc" placeholder="Descrição"><br>
+                <input type="text" id="desc" name="texto" placeholder="Descrição"><br>
 
                 <label for="imagem">
                     <div class="addImg">
                         <img src="{{asset('assets\img\camera.svg')}}"> </img>
                         <input type="file"  id="imagem" name="imagem" placeholder="Adicionar foto" >
-                        <span>Adicionar Imagem</span>
+                        <span id="file-name">Adicionar Imagem</span>
                     </div>
                 </label>
             </form>
         </div>
 
         <div class="footer">
-            <img src="{{asset('assets\img\voltar.svg')}}" alt="Voltar" id="voltar">
+            <a href="javascript:history.back()" >
+                <img src="{{asset('assets\img\voltar.svg')}}" alt="Voltar" id="voltar">
+            </a>
+       
             <button type="submit" form="noticiaForm" style="background: none; border: none; padding: 0;">
                 <img src="{{asset('assets/img/send.svg')}}" alt="Send" id="save">
             </button>
         </div>
 </div>
+
+<script>
+    document.getElementById('imagem').addEventListener('change', function() {
+        const fileInput = this;
+        const fileNameSpan = document.getElementById('file-name');
+        
+        if (fileInput.files.length > 0) {
+            fileNameSpan.textContent = fileInput.files[0].name;
+        } else {
+            fileNameSpan.textContent = 'Adicionar Imagem';
+        }
+    });
+</script>
+
