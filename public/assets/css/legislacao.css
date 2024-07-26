@@ -1,0 +1,232 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 1440px;
+    height: 1655;
+    top: -2512px;
+    left: 8649px;
+    gap: 0px;
+    opacity: 0px;
+    padding: 100px;
+}
+
+.cardAdd{
+    margin:auto;
+    width: 1231px;
+    height: 1268px;
+    top: 88px;
+    left: 105px;
+    gap: 0px;
+    border-radius: 20px 20px 20px 20px;
+    opacity: 0px;
+    background: #F8F8F8;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+}
+
+h1{
+    margin: auto;
+    padding: 30px;
+    width: 287px;
+    height: 74px;
+    top: 208px;
+    left: 552px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Georgia; /*Falta importar*/
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 73.85px;
+    text-align: left;
+    color: #209DD5; 
+}
+
+hr{
+    margin-block-start: 70px; /*provissorio*/
+
+    width: 650px;
+    height: 0px;
+    top: 327px;
+    left: 371px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+}
+
+.divForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50;
+}
+
+input{
+    margin: 10; /*provissorio*/
+    padding: 10;
+
+    border: 1px solid #000000;
+    gap: 0px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    cursor: pointer;
+
+}
+
+input::placeholder{
+/*::-vebkit-input-placeholder{*/
+    padding: 10;
+    width: 164px; 
+    height: 39px;
+    top: 583px;
+    left: 235px;
+    gap: 0px;
+    opacity: 0px;
+    
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45.45px;
+    text-align: left;
+
+    color: #000;
+}
+
+
+#titulo, #resumo, #url{
+    width: 1016px;
+    height: 94px;
+    top: 555px;
+    left: 215px;  
+}
+
+#desc {  
+    width: 1016px;
+    height: 393px;
+    top: 699px;
+    left: 215px;
+}
+
+.addImg{
+    margin: 10; /*provissorio*/
+    padding: 10;
+
+    border: 1px solid #000000;
+    gap: 0px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+
+}
+
+.addImg img{
+    width: 50px;
+    height: 50px;
+    top: 1164px;
+    left: 235px;
+    padding: 6.25px 4.17px 6.25px 4.17px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.addImg input{
+    display: none;
+}
+
+.addImg span {
+    padding-left: 20;
+    height: 39px;
+    top: 1169px;
+    left: 317px;
+    gap: 0px;
+    opacity: 0px;
+
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45.45px;
+
+    text-align: left;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10;
+
+    margin-top: 250;
+}
+
+#save, #edit{
+    width: 80px;
+    height: 70px;
+    top: 1291px;
+    left: 1246px;
+    padding: 8.33px 4.17px 8.33px 6.25px;
+    cursor: pointer;
+}
+
+ #voltar{
+    width: 30px;
+    top: 1316px;
+    left: 165px;
+    border: 4px 4px 4px 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.voltar span{
+    width: 113px;
+    height: 39px;
+    top: 1296px;
+    left: 180px;
+
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45.45px;
+    text-align: left;
+    color: #209DD5;
+
+    padding: 10px;
+    cursor: pointer;
+}
+
+.editar {
+    display: flex;
+    align-items: center;
+    
+}
+
+.editar span{
+    width: 115px;
+    height: 39px;
+
+
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: 400;
+
+    text-align: left;
+    color: #209DD5;
+
+
+    cursor: pointer;
+}
+
+#editar{
+    width: 50px;
+    height: 50px;
+    top: 1291px;
+    left: 1256px;
+    padding: 6.25px;
+    
+    cursor: pointer;    
+    display: inline-block;
+}

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-<link rel="stylesheet" href="{{ asset ('assets/css/indexNoticia.css') }}">
+<link rel="stylesheet" href="{{ asset ('assets/css/indexLegislacao.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/pagination.css') }}">
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

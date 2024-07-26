@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-<link rel="stylesheet" href="{{ asset ('assets/css/noticia.css') }}">
+<link rel="stylesheet" href="{{ asset ('assets/css/legislacao.css') }}">
 
 <link href="https://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
                 
@@ -10,7 +10,7 @@
         <hr> 
 
         <div class="divForm">
-            <form class="form" action="{{ route('legislacoes.store')}}" method="post" id="noticiaForm"> <!--Trocar o id-->
+            <form class="form" action="{{ route('legislacoes.store')}}" method="post" id="legislacaoForm">
                 @csrf
                 <input type="text" id="titulo" name="titulo" placeholder="Título"><br>
                 <input type="text" id="resumo" name="resumo" placeholder="Resumo"><br>
@@ -23,7 +23,7 @@
                 <img src="{{asset('assets\img\voltar.svg')}}" alt="Voltar" id="voltar">
             </a>
        
-            <button type="submit" form="noticiaForm" style="background: none; border: none; padding: 0;">
+            <button type="submit" form="legislacaoForm" style="background: none; border: none; padding: 0;">
                 <img src="{{asset('assets/img/send.svg')}}" alt="Send" id="save">
             </button>
         </div>
