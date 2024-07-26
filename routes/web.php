@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\LegislacaoController;
 
 //rotas de noticias
 Route::middleware(['auth'])->group(function () {
@@ -13,6 +14,17 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/noticia', [NoticiaController::class, 'store'])->name('noticias.store');
     Route::put('/noticia/{noticias}', [NoticiaController::class, 'update'])->name('noticia.update');
     Route::delete('/noticia/{noticias}', [NoticiaController::class, 'destroy'])->name('noticia_destroy');
+});
+
+//rotas de legislacao
+Route::middleware(['auth'])->group(function () {
+    Route::get('/legislacoes', [LegislacaoController::class, 'index'])->name('legislacoes');
+    Route::get('/legislacao/create', [LegislacaoController::class, 'create'])->name('create_legislacao');
+    Route::get('/legislacao/{legislacoes}', [LegislacaoController::class, 'show'])->name('mostrar_legislacao');
+    Route::get('/legislacao/{legislacoes}/edit', [LegislacaoController::class, 'edit'])->name('editar_legislacao');
+    Route::post('/legislacao', [LegislacaoController::class, 'store'])->name('legislacoes.store');
+    Route::put('/legislacao/{legislacoes}', [LegislacaoController::class, 'update'])->name('legislacao.update');
+    Route::delete('/legislacao/{legislacoes}', [LegislacaoController::class, 'destroy'])->name('legislacao_destroy');
 });
 
 
