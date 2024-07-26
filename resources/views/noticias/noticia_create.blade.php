@@ -2,7 +2,9 @@
 <link rel="stylesheet" href="{{ asset ('assets/css/noticia.css') }}">
 
 <link href="https://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
-                
+     
+<script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+
 
 <div class="container">
     <div class="cardAdd">
@@ -14,7 +16,9 @@
                 @csrf
                 <input type="text" id="titulo" name="titulo" placeholder="Título"><br>
                 <input type="text" id="subtitulo" name="subtitulo" placeholder="Subtítulo"><br>
-                <input type="text" id="desc" name="texto" placeholder="Descrição"><br>
+     
+
+                <textarea name="texto" id="desc"></textarea>
 
                 <label for="imagem">
                     <div class="addImg">
@@ -48,5 +52,5 @@
             fileNameSpan.textContent = 'Adicionar Imagem';
         }
     });
+    CKEDITOR.replace('desc');
 </script>
-

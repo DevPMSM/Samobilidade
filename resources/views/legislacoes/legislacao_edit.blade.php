@@ -14,6 +14,7 @@
             @method('PUT')
                 <input type="text" id="titulo" name="titulo" value="{{$legislacao->titulo}}"><br>
                 <input type="text" id="resumo" name="resumo" value="{{$legislacao->resumo}}"><br>
+                
                 <input type="text" id="url" name="url" value="{{$legislacao->url}}"><br>
             </form>
         </div>

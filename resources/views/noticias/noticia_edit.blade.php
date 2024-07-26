@@ -15,7 +15,7 @@
                 <input type="text" id="titulo" name="titulo" value="{{$noticia->titulo}}"><br>
                 <input type="text" id="subtitulo" name="subtitulo" value="{{$noticia->subtitulo}}"><br>
                 <input type="text" id="desc" name="texto" value="{{$noticia->texto}}"><br>
-            
+
                 <label for="imagem">
                     <div class="addImg">
                         <img src="{{asset('assets\img\camera.svg')}}"> </img>
