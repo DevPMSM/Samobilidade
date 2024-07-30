@@ -84,14 +84,13 @@ p {
     cursor: pointer;
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 1200px) {
     h1, h2, p {
         font-size: 5em;
     }
 
     .footer {
-        flex-direction: start; /* Alinha itens verticalmente em telas menores */
+        flex-direction: start; 
     }
 }
 
