@@ -17,8 +17,8 @@
                 <input type="text" id="titulo" name="titulo" placeholder="Título"><br>
                 <input type="text" id="subtitulo" name="subtitulo" placeholder="Subtítulo"><br>
      
-
-                <textarea name="texto" id="desc"></textarea>
+                <!--<textarea name="texto" id="desc"></textarea>-->
+                <input type="text" id="desc" name="texto" placeholder="Descrição"><br>
 
                 <label for="imagem">
                     <div class="addImg">
@@ -52,5 +52,6 @@
             fileNameSpan.textContent = 'Adicionar Imagem';
         }
     });
-    CKEDITOR.replace('desc');
+    
+    //CKEDITOR.replace('desc');
 </script>

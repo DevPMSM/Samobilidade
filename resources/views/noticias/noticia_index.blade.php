@@ -24,7 +24,7 @@
                 <div class="not">
                     <p>{{ $noticia->titulo }}</p>                  
                         <div class="botoes">
-                            <a href="https://www.google.com/">
+                            <a href="{{route('mostrar_noticia', $noticia->id)}}">
                                 <img src="{{asset('assets\img\info.svg')}}" alt="Infor" id="info">
                             </a>
 

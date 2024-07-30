@@ -98,12 +98,11 @@ hr {
 }
 
 .not p {
-    width: 110px;
+  
     height: 39px;
     top: 358px;
     left: 498px;
-    gap: 0px;
-    opacity: 0px;
+ 
     font-family: Georgia;
     font-size: 40px;
     font-weight: 400;

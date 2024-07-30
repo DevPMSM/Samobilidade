@@ -49,7 +49,7 @@ class NoticiaController extends Controller
         $request->validate([
             'titulo' => 'required|max:255',
             'subtitulo' => 'required|max:255',
-            'texto' => 'required|max:255',
+            'texto' => 'required|max:2000',
             'imagem' => 'required',
         ]);
 
@@ -63,7 +63,7 @@ class NoticiaController extends Controller
     public function show(string $id)
     {
         $noticia = Noticia::find($id);
-        return view('noticias.noticia_edit', compact('noticia'));
+        return view('noticias.noticia', compact('noticia'));
     }
 
     /**
@@ -84,7 +84,7 @@ class NoticiaController extends Controller
         $request->validate([
             'titulo' => 'required|max:255',
             'subtitulo' => 'required|max:255',
-            'texto' => 'required|max:255',
+            'texto' => 'required|max:2000',
             'imagem',
         ]);
 

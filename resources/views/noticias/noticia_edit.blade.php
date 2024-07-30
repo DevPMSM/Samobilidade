@@ -27,10 +27,10 @@
         </div>
 
         <div class="footer">
-            <div class="voltar">
+            <a href="javascript:history.back()" class="voltar" >
                 <img src="{{asset('assets\img\voltar.svg')}}" alt="Voltar" id="voltar">
                 <span>Voltar</span>
-            </div>
+            </a>
 
             <button class="editar" type="submit" form="noticiaForm" style="background: none; border: none; padding: 0;">
                 <span>Editar</span>

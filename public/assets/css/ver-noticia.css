@@ -1,0 +1,88 @@
+h1 {
+    width: 1094px;
+    height: 50px;
+    top: 316px;
+    left: 30px;
+
+   font-family: Georgia;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 113.62px;
+    letter-spacing: -0.05em;
+    text-align: left;
+
+   color: #209DD5;
+   margin-bottom: 80px;
+   padding: 15px;
+}
+
+img{
+    width: 1444px;
+    height: 643px;
+    top: 426px;
+}
+
+h2 {
+    padding: 15px;
+    width: 1003px;
+    height: 96px;
+    top: 1129px;
+    left: 30px;
+
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45.45px;
+    text-align: left;
+
+    color: #A0A0A0;
+}
+
+p {
+    padding: 15PX;
+    width: 1324px;
+    height: 272px;
+    top: 1285px;
+    left: 30px;
+
+    font-family: Georgia;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34.09px;
+    text-align: left;
+
+    color: #000000;
+}
+
+.footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    margin-top: 250;
+}
+
+.voltar {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#voltar{
+    width: 30px;
+    top: 1316px;
+    left: 165px;
+    border: 4px 4px 4px 4px;
+}
+
+.voltar span{
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45.45px;
+    text-align: left;
+    color: #209DD5;
+
+    padding: 10px;
+    cursor: pointer;
+}
