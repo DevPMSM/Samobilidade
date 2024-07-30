@@ -4,7 +4,7 @@
 
 <!-- COMPONENTE DO FOOTER  -->
 <footer class="footer">
-    <div class="footer-text">Desenvolvido por <p>Secretaria Munipal Ciência, Tecnologia,Inovação Educação e Trabalho</p></div>
+    <div class="footer-text">Desenvolvido por <p>Secretaria Munipal Ciência, Tecnologia, Inovação, Educação e Trabalho</p></div>
     <div class="footer-actions">
         <span>Siga nossas redes sociais</span>
         <span class="footer-socials">
