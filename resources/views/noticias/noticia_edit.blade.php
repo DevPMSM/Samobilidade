@@ -9,7 +9,7 @@
         <h1> Editar  </h1>
         <hr> 
         <div class="divForm">
-            <form class="form" action="{{route('noticia.update', $noticia->id) }}" method="post" id="noticiaForm">
+            <form class="form" action="{{route('noticia.update', $noticia->id) }}" method="post" id="noticiaForm" enctype="multipart/form-data">
             @csrf
             @method('PUT')
                 <input type="text" id="titulo" name="titulo" value="{{$noticia->titulo}}"><br>

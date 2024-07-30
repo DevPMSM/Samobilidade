@@ -44,16 +44,28 @@ class NoticiaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
-    {
+    {   
         $request->validate([
             'titulo' => 'required|max:255',
             'subtitulo' => 'required|max:255',
             'texto' => 'required|max:2000',
-            'imagem' => 'required',
+            'imagem' => 'required|image', 
         ]);
 
-        Noticia::create($request->all());
+        $noticiaData = $request->all(); 
+
+        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+            $imagem = $request->file('imagem');
+            $imagemName = md5($imagem->getClientOriginalName() . strtotime("now") . "." . $imagem->getClientOriginalExtension());
+            
+            $imagem->move(public_path('img/imagens'), $imagemName);
+
+            $noticiaData['imagem'] = $imagemName; // Atualiza o nome da imagem no array de dados
+        }
+
+        Noticia::create($noticiaData); 
         return redirect()->route('noticias')->with('success', 'Noticia criada com sucesso.');
     }
 
@@ -85,12 +97,24 @@ class NoticiaController extends Controller
             'titulo' => 'required|max:255',
             'subtitulo' => 'required|max:255',
             'texto' => 'required|max:2000',
-            'imagem',
+            'imagem|image',
         ]);
 
         $noticia = Noticia::find($id);
-        $noticia->update($request->all());
 
+        $noticiaData = $request->except('imagem'); // cria um array e exclui o campo 'imagem' para que não sobrescrever a imagem que já tem
+
+        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+            $imagem = $request->file('imagem');
+            $imagemName = md5($imagem->getClientOriginalName() . strtotime("now") . "." . $imagem->getClientOriginalExtension());
+            
+            $imagem->move(public_path('img/imagens'), $imagemName);
+    
+            $noticiaData['imagem'] = $imagemName; // Adiciona a nova imagem aos dados
+        }
+
+
+        $noticia->update($noticiaData);
 
         return redirect()->route('noticias')->with('success', 'noticia atualizada com sucesso');
     }

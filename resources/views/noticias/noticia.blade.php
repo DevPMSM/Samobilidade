@@ -5,7 +5,7 @@
 
 <div class="container">
     <h1> {{$noticia->titulo}} </h1>
-    <img src="{{$noticia->imagem}}" alt="img">
+    <img src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="img">
     <h2> {{$noticia->subtitulo}} </h2>
     <p>{{$noticia->texto}}</p>
 </div>

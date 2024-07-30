@@ -12,7 +12,7 @@
         <hr> 
 
         <div class="divForm">
-            <form class="form" action="{{ route('noticias.store')}}" method="post" id="noticiaForm">
+            <form class="form" action="{{ route('noticias.store')}}" method="post" id="noticiaForm" enctype="multipart/form-data">
                 @csrf
                 <input type="text" id="titulo" name="titulo" placeholder="Título"><br>
                 <input type="text" id="subtitulo" name="subtitulo" placeholder="Subtítulo"><br>
