@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noticias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin: 20px;
+
+}
+
+h1 {
+    width: 236px;
+    height: 74px;
+    top: 88px;
+    left: 810px;
+
+    font-family: Georgia;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 73.85px;
+    text-align: left;
+
+    color: #000000;
+
+    margin: 10px;
+    
+}
+
+hr {
+    width: 650px;
+    height: 0px;
+    top: 202px;
+    left: 603px;
+    border: 1px 1px 1px 1px;
+
+    margin: 20px;
+}
+
+#add {
+    width: 142px;
+    height: 39px;
+    top: 250px;
+    left: 857px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #000000;
+
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+}
+
+#add span{
+    width: 107px;
+    height: 43px;
+    top: 248px;
+    left: 887px;
+    padding: 10px;
+    gap: 10px;
+}
+
+#icAdd{
+    width: 24px;
+    height: 24px;
+    top: 257px;
+    left: 862px;
+    padding: 5px 0px 0px 0px;
+}
+
+.allNoticias{
+    padding: 20px;
+    margin: 20px;
+    justify-content: center;
+
+}
+.not {
+    width: 900px;
+    height: 76px;
+    top: 339px;
+    left: 478px;
+    gap: 0px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px 1px 1px 1px;
+    opacity: 0px;
+    border: 1px solid #000000;
+
+    margin: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.not p {
+  
+    height: 39px;
+    top: 358px;
+    left: 498px;
+ 
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+
+    padding-left: 15px;
+
+}
+
+
+#info, #editar, #delete{
+   background-color:#209DD5;
+   display: inline-block;
+
+   width: 40px;
+    height: 40px;
+    top: 359px;
+    left: 1261px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 8;
+}
+
