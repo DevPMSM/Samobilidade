@@ -19,6 +19,7 @@ h1 {
 img {
     width: 100%; /* Ajusta a imagem para 100% do contêiner pai */
     height: 643px; 
+    object-fit: cover;
 }
 
 h2 {
@@ -87,10 +88,6 @@ p {
 @media (max-width: 1200px) {
     h1, h2, p {
         font-size: 5em;
-    }
-
-    .footer {
-        flex-direction: start; 
     }
 }
 

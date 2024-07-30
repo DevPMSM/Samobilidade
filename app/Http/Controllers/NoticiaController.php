@@ -8,6 +8,12 @@ use App\Models\Noticia;
 
 class NoticiaController extends Controller
 {
+    public function noticiario()
+    {
+        $noticias = Noticia::all();
+        
+        return view('noticias.noticiario', compact("noticias"))->with('noticias', $noticias);
+    }
 
     /**
      * Display a listing of the resource.

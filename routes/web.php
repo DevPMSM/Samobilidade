@@ -7,6 +7,7 @@ use App\Http\Controllers\LegislacaoController;
 
 //rotas de noticias
 Route::middleware(['auth'])->group(function () {
+    Route::get('/noticiario', [NoticiaController::class, 'noticiario'])->name('noticiario');
     Route::get('/noticias', [NoticiaController::class, 'index'])->name('noticias');
     Route::get('/noticia/create', [NoticiaController::class, 'create'])->name('create_noticia');
     Route::get('/noticia/{noticias}', [NoticiaController::class, 'show'])->name('mostrar_noticia');
