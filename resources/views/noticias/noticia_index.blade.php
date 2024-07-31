@@ -4,6 +4,9 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+@component('components.navbar') @endcomponent
+
 <div class="container">
     <div class="noticias">
         <h1> Noticias </h1>
@@ -72,3 +75,4 @@
         @endif
     </div>
 
+    @component('components.footer') @endcomponent
