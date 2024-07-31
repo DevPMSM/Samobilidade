@@ -6,6 +6,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 50;
 }
 
 h1 {
@@ -66,11 +67,13 @@ span{
     line-height: 45.45px;
     text-align: left;
     color: #209DD5;
+    padding: 25px 0 0 0;
 }
 
 .card-body{
     display: flex;
     justify-content: left;
+    padding-top: 30px;
 
 }
 
