@@ -2,16 +2,19 @@
 <link rel="stylesheet" href="{{ asset ('assets/css/noticiario.css') }}">
 
 
-
 <link href="https://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
 
-
-<header>
-    <h1> Noticiário <span>.</span> </h1>
-    <br>
-</header>
+@component('components.navbar') @endcomponent
 
 <div class="container">
+
+    <div class="titulo">
+    
+        <h1> Noticiário <span>.</span> </h1>
+        <br>
+
+    </div>
+
     <div class="card_container">
         @foreach ($noticias as $noticia)
             <div class="cards" >
@@ -30,5 +33,7 @@
             <br>
         @endforeach
     </div>
-
 </div>
+
+@component('components.footer')
+@endcomponent
