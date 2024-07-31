@@ -1,0 +1,121 @@
+/* ESTILIZAÇÃO DO COMPONENTE SIDEBAR DO DASHBOARD ADMIN  */
+
+.sidebar {
+    width: 25%;
+    height: 100vh;
+    padding: 2rem 1.25rem;
+    background: #209DD5;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.sidebar-name-title {
+    font-size: 2.5rem;
+}
+
+.sidebar-btn {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 200;
+    align-items: center;
+}
+
+.sidebar-btn:hover {
+    border-radius: 0.5rem;
+    background-color: #1875a0;
+    transition: 0.2s ease-in-out;
+}
+
+hr {
+    width: 85%;
+}
+
+.sidebar-table {
+    text-decoration: none;
+    width: 100%;
+    padding: 1.5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar-table-list {
+    padding: 0.5rem;
+}
+
+.sidebar-table-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.sidebar-table-item:hover {
+    background-color: #1875a0;
+    transition: 0.2s ease-in-out;
+    border-radius: 0.5rem;
+}
+
+.sidebar-toggle-btn {
+    display: none;
+
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+}
+
+.sidebar.show {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+        width: 70%;
+        padding-top: 4rem;
+    }
+
+    .sidebar-toggle-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 1156px) {
+    .sidebar-table-item {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .sidebar-name-title {
+        font-size: 1.5rem;
+    }
+}
