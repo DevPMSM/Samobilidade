@@ -10,8 +10,15 @@ PARA NÃO QUEBRAR A TELA -->
             @include('components/sidebar-admin') 
             <!-- OS ITENS DA TELA DEVEM FICAR DENTRO DA DIV DASHBOARD -->
             <div class="dashboard">
-                asdas
                 <h1>LOGADO</h1>
+                @if ($user->role === 'admin')
+                    <h2>Todos os usuários:</h2>
+                @else
+                    <h2>Seu perfil:</h2>
+                @endif
+                @foreach ($users as $user)
+                    <h3>{{ $user->name }}</h3>
+                @endforeach
             </div>
         </main>
         @include('components/footer')
