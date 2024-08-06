@@ -30,7 +30,7 @@
             </form>
         </div>
 
-        <div class="footer">
+        <div class="nav">
             <a href="javascript:history.back()" >
                 <img src="{{asset('assets\img\voltar.svg')}}" alt="Voltar" id="voltar">
             </a>
@@ -38,8 +38,12 @@
             <button type="submit" form="noticiaForm" style="background: none; border: none; padding: 0;">
                 <img src="{{asset('assets/img/send.svg')}}" alt="Send" id="save">
             </button>
-        </div>
+        </div>  
+    </div>  
 </div>
+
+@component('components.footer') @endcomponent
+
 
 <script>
     document.getElementById('imagem').addEventListener('change', function() {
@@ -55,3 +59,4 @@
     
     //CKEDITOR.replace('desc');
 </script>
+

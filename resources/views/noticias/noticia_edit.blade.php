@@ -26,7 +26,7 @@
             </form>
         </div>
 
-        <div class="footer">
+        <div class="nav">
             <a href="javascript:history.back()" class="voltar" >
                 <img src="{{asset('assets\img\voltar.svg')}}" alt="Voltar" id="voltar">
                 <span>Voltar</span>
@@ -38,9 +38,10 @@
             </button>
         </div>
     
-       
     </div>
 </div>
+
+@component('components.footer') @endcomponent
 
 <script>
     document.getElementById('imagem').addEventListener('change', function() {

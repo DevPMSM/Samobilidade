@@ -4,6 +4,7 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
 <div class="container">
     <div class="legislacoes">
         <h1> Legislações </h1>
@@ -72,3 +73,4 @@
         @endif
     </div>
 
+@component('components.footer') @endcomponent
