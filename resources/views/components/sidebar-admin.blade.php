@@ -25,19 +25,28 @@
             </header>
             <hr>
             <ul class="sidebar-table">
+            @if(auth()->user()->hasRole('editor'))
                 <li class="sidebar-table-list">
-                    <a href="#" class="sidebar-table-item">
+                    <a href="/noticias" class="sidebar-table-item">
                         <span class="material-symbols-outlined" style="font-size: 35px;">newspaper</span>
                         Notícias
                     </a>
                 </li>
                 <li class="sidebar-table-list">
-                    <a href="#" class="sidebar-table-item">
+                    <a href="/legislacoes" class="sidebar-table-item">
                         <span class="material-symbols-outlined" style="font-size: 35px;">balance</span>
                         Legislação
                     </a>
                 </li>
-                
+                @endif
+                @if(auth()->user()->hasRole('admin'))
+                <li class="sidebar-table-list">
+                    <a href="/admin/users" class="sidebar-table-item">
+                        <span class="material-symbols-outlined" style="font-size: 35px;">balance</span>
+                        Usuarios
+                    </a>
+                </li>
+                @endif
             </ul>
         </div>
             <a href="/" class="sidebar-btn">
