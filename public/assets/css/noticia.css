@@ -22,11 +22,10 @@
     border-radius: 20px 20px 20px 20px;
     opacity: 0px;
     background: #F8F8F8;
-    box-shadow: 0px 4px 4px 0px #00000040;
-
+   box-shadow: 0px 4px 4px 0px #00000040;
 }
 
-h1{
+.cardAdd h1{
     margin: auto;
     padding: 30px;
     width: 287px;
@@ -43,7 +42,7 @@ h1{
     color: #209DD5; 
 }
 
-hr{
+.cardAdd hr{
     margin-block-start: 70px; /*provissorio*/
 
     width: 650px;
@@ -155,7 +154,7 @@ input::placeholder{
     text-align: left;
 }
 
-.footer {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;

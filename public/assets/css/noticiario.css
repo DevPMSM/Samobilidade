@@ -1,21 +1,24 @@
 body{
-    padding: 50px;
+    padding: 40px;
 }
 
-header{
+.titulo{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-top: 30;
 }
 
-h1 {
+.titulo h1 {
     width: 100%;
     max-width: 315px;
     height: auto;
     font-family: Georgia;
-    font-size: 8vw; 
+    font-size: 5vw; 
     display: flex;
     margin-bottom: 50px;
+    justify-content: center;
 }
 
 span{
@@ -25,6 +28,7 @@ span{
 .container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .card_container{
@@ -38,11 +42,13 @@ span{
 .cards{
     overflow: hidden;
     width: 100%;
+    max-width: 700;
+    margin: 55px;
+
 }
 
 .cards img{
     width: 100%;
-  
     object-fit: cover;
     height: auto;
     aspect-ratio: 4/3;
@@ -66,11 +72,13 @@ span{
     line-height: 45.45px;
     text-align: left;
     color: #209DD5;
+    padding: 25px 0 0 0;
 }
 
 .card-body{
     display: flex;
     justify-content: left;
+    padding-top: 30px;
 
 }
 
@@ -84,7 +92,7 @@ span{
     
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
     h1 {
         font-size: 48px;
     }
@@ -94,18 +102,44 @@ span{
     .card-body p {
         font-size: 24px;
     }
-
-    
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
     h1 {
-        font-size: 65px;
+        font-size: 55px;
+    }
+
+    .notBar{
+        justify-content: space-between;
+        align-items: center;
     }
     .notBar h2 {
-        font-size: 40px;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 30px;
+        padding: 15px 0 0 0;
+    }
+
+    #ir{
+        width: 20px;
     }
     .card-body p {
-        font-size: 30px;
+        font-size: 20px;
     }
+
+    .card_container{
+        display: flex;
+        flex-direction: column;
+        margin: 10;
+        max-width: 100%;
+        
+    }
+
+    .cards{
+        overflow: hidden;
+        width: 100%;
+        max-width: 330;
+        margin: 15px;
+    }
+    
 }

@@ -13,8 +13,8 @@
         <nav class="navbar-actions">
             <ul class="navbar-list">
                 <li class="navbar-items"><a href="#">Home</a></li>
-                <li class="navbar-items"><a href="#">Legislação</a></li>
-                <li class="navbar-items"><a href="#">Notícias</a></li>
+                <li class="navbar-items"><a href="{{route('legislacoes')}}">Legislação</a></li>
+                <li class="navbar-items"><a href="{{route('noticias')}}">Notícias</a></li>
                 <li class="navbar-items"><a href="#">Contato</a></li>
             </ul>
         </nav>
@@ -50,8 +50,8 @@
                     </span>
                 </li>
                 <li class="sidebar-item"><a href="/">Home</a></li>
-                <li class="sidebar-item"><a href="#">Legislação</a></li>
-                <li class="sidebar-item"><a href="#">Notícias</a></li>
+                <li class="sidebar-item"><a href="{{route('legislacoes')}}">Legislação</a></li>
+                <li class="sidebar-item"><a href="{{route('noticias')}}">Notícias</a></li>
                 <li class="sidebar-item"><a href="#">Contato</a></li>
                 </ul>
                 <div class="sidebar-item login-sidebar-button">

@@ -19,7 +19,7 @@
             </form>
         </div>
 
-        <div class="footer">
+        <div class="nav">
             <div class="voltar">
                 <img src="{{asset('assets\img\voltar.svg')}}" alt="Voltar" id="voltar">
                 <span>Voltar</span>
@@ -30,11 +30,10 @@
                 <img src="{{asset('assets\img\edit.svg')}}" alt="Editar" id="editar">
             </button>
         </div>
-    
-       
     </div>
 </div>
 
+@component('components.footer') @endcomponent
 <script>
     document.getElementById('imagem').addEventListener('change', function() {
         const fileInput = this;
