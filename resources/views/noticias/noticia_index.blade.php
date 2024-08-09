@@ -28,19 +28,21 @@
                             <a href="{{route('mostrar_noticia', $noticia->id)}}" target='_blank' >
                                 <img src="{{asset('assets\img\info.svg')}}" alt="Infor" id="info">
                             </a>
+                            @can('access')
+                                <a href="{{route('editar_noticia', $noticia->id)}}" target='_blank' >
+                                    <img src="{{asset('assets\img\editar.svg')}}" alt="Editar" id="editar">
+                                </a>
 
-                            <a href="{{route('editar_noticia', $noticia->id)}}" target='_blank' >
-                                <img src="{{asset('assets\img\editar.svg')}}" alt="Editar" id="editar">
-                            </a>
-
-                            <form action="{{ route('noticia_destroy', $noticia->id) }}" method="POST" style="display:inline; margin: 0px;" >
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" style="background: none; border: none; cursor: pointer;">
-                                    <img src="{{ asset('assets/img/delete.svg') }}" alt="Deletar" id="delete">
-                                </button>
-                            </form>
-                            </div>                                           
+                                <form action="{{ route('noticia_destroy', $noticia->id) }}" method="POST" style="display:inline; margin: 0px;" >
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" style="background: none; border: none; cursor: pointer;">
+                                        <img src="{{ asset('assets/img/delete.svg') }}" alt="Deletar" id="delete">
+                                    </button>
+                                </form>
+                            @endcan
+                        </div>               
+                                                    
                 </div>                                                    
             @endforeach
         </div>
