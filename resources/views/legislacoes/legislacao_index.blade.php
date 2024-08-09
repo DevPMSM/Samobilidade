@@ -25,11 +25,11 @@
                 <div class="not">
                     <p>{{ $legislacao->titulo }}</p>                  
                         <div class="botoes">
-                            <a href="https://www.google.com/">
+                            <a href="https://www.google.com/" target='_blank' >
                                 <img src="{{asset('assets\img\info.svg')}}" alt="Infor" id="info">
                             </a>
 
-                            <a href="{{route('editar_legislacao', $legislacao->id)}}">
+                            <a href="{{route('editar_legislacao', $legislacao->id)}}" target='_blank' >
                                 <img src="{{asset('assets\img\editar.svg')}}" alt="Editar" id="editar">
                             </a>
 

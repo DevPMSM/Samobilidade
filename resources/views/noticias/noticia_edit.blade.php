@@ -20,8 +20,9 @@
                     <div class="addImg">
                         <img src="{{asset('assets\img\camera.svg')}}"> </img>
                         <input type="file"  id="imagem" name="imagem" placeholder="Adicionar foto" >
-                        <span id="file-name">Adicionar Imagem</span>
+                        <span id="file-name">{{$noticia->imagem}}</span>
                     </div>
+                    <img src="{{asset('storage/img/'). '/' .$noticia->imagem}}">
                 </label>
             </form>
         </div>

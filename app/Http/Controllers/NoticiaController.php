@@ -44,6 +44,7 @@ class NoticiaController extends Controller
      */
     public function create()
     {
+        
         return view('noticias.noticia_create');
     }
 
@@ -64,10 +65,9 @@ class NoticiaController extends Controller
 
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
             $imagem = $request->file('imagem');
-            $imagemName = md5($imagem->getClientOriginalName() . strtotime("now") . "." . $imagem->getClientOriginalExtension());
-            
-            $imagem->move(public_path('img/imagens'), $imagemName);
-
+           // $imagemName = md5($imagem->getClientOriginalName() . strtotime("now") . "." . $imagem->getClientOriginalExtension());
+            $imagemName = $imagem->hashName();
+            $imagem->move(storage_path('app/public/img'), $imagemName);
             $noticiaData['imagem'] = $imagemName; // Atualiza o nome da imagem no array de dados
         }
 

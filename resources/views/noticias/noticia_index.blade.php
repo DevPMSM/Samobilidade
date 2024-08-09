@@ -25,11 +25,11 @@
                 <div class="not">
                     <p>{{ $noticia->titulo }}</p>                  
                         <div class="botoes">
-                            <a href="{{route('mostrar_noticia', $noticia->id)}}">
+                            <a href="{{route('mostrar_noticia', $noticia->id)}}" target='_blank' >
                                 <img src="{{asset('assets\img\info.svg')}}" alt="Infor" id="info">
                             </a>
 
-                            <a href="{{route('editar_noticia', $noticia->id)}}">
+                            <a href="{{route('editar_noticia', $noticia->id)}}" target='_blank' >
                                 <img src="{{asset('assets\img\editar.svg')}}" alt="Editar" id="editar">
                             </a>
 
