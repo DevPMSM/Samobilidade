@@ -18,7 +18,7 @@
     <div class="card_container">
         @foreach ($noticias as $noticia)
             <div class="cards" >
-                <img class="card-img" src="{{asset('storage/img/'). '/' .$noticia->imagem}}"> alt="Imagem de capa do card">
+                <img class="card-img" src="{{asset('storage/img/'). '/' .$noticia->imagem}}" alt="Imagem de capa do card">
                 <div class="notBar">
                     <h2> {{$noticia->titulo}} </h2>
                     <a href="{{route('mostrar_noticia', $noticia->id)}}" class="ir" target="_blank" >
