@@ -97,7 +97,6 @@ p {
 @media (max-width: 1200px) {
     h1, h2, p {
         font-size: 2em;
-    
     }
 }
 
@@ -112,6 +111,12 @@ p {
 
     #voltar {
         width: 1.5em; 
+    }
+    .container img {
+        width: 100%; /* Ajusta a imagem para 100% do contêiner pai */
+        height: auto; 
+        object-fit: cover;
+    
     }
 }
 
