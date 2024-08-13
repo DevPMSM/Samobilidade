@@ -22,7 +22,7 @@
                         <input type="file"  id="imagem" name="imagem" placeholder="Adicionar foto" >
                         <span id="file-name">{{$noticia->imagem}}</span>
                     </div>
-                    <img src="{{asset('storage/img/'). '/' .$noticia->imagem}}">
+
                 </label>
             </form>
         </div>
