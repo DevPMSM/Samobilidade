@@ -12,9 +12,9 @@
         <div class="divForm">
             <form class="form" action="{{ route('legislacoes.store')}}" method="post" id="legislacaoForm">
                 @csrf
-                <input type="text" id="titulo" name="titulo" placeholder="Título"><br>
-                <input type="text" id="resumo" name="resumo" placeholder="Resumo"><br>
-                <input type="text" id="url" name="url" placeholder="URL"><br>
+                <input type="text" id="titulo" name="titulo" placeholder="Título" style="font-family: georgia; font-size: 24px"><br>
+                <input type="text" id="resumo" name="resumo" placeholder="Resumo" style="font-family: georgia; font-size: 24px"><br>
+                <input type="text" id="url" name="url" placeholder="URL" style="font-family: georgia; font-size: 24px"><br>
             </form>
         </div>
 

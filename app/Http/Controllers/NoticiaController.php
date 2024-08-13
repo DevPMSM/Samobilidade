@@ -57,7 +57,7 @@ class NoticiaController extends Controller
         $request->validate([
             'titulo' => 'required|max:255',
             'subtitulo' => 'required|max:255',
-            'texto' => 'required|max:2000',
+            'texto' => 'required|string|max:4294967295',
             'imagem' => 'required|image', 
         ]);
 
@@ -102,7 +102,7 @@ class NoticiaController extends Controller
         $request->validate([
             'titulo' => 'required|max:255',
             'subtitulo' => 'required|max:255',
-            'texto' => 'required|max:2000',
+            'texto' => 'required|string|max:4294967295',
             'imagem|image',
         ]);
 

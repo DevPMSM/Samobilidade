@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('legislacoes', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->string('resumo');
+            $table->text('resumo');
             $table->string('url');
             $table->timestamps();
         });
