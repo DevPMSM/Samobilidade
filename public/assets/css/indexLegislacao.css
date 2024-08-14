@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 88%;
-    /*width: 100%;*/
+    width: 100%;
 }
 
 .legislacoes {
@@ -19,9 +19,8 @@
 
 .legislacoes h1 {
     width: 100%;
-    max-width: 236px;
-    /*  top: 88px;
-    left: 810px;*/
+    max-width: 300px;
+  
     font-family: Georgia;
     font-size: 65px;
     font-weight: 400;
