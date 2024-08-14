@@ -98,6 +98,11 @@ p {
     h1, h2, p {
         font-size: 2em;
     }
+    .container img {
+        width: 100%; /* Ajusta a imagem para 100% do contêiner pai */
+        height: auto; 
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 768px) {
