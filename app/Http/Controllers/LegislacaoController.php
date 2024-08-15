@@ -43,7 +43,7 @@ class LegislacaoController extends Controller
     {
         $request->validate([
             'titulo' => 'required|max:255',
-            'resumo' => 'required|max:300',
+            'resumo' => 'required|string|max:65535',
             'url' => 'required',
         ]);
 
@@ -76,7 +76,7 @@ class LegislacaoController extends Controller
     {
         $request->validate([
             'titulo' => 'required|max:255',
-            'resumo' => 'required|max:300',
+            'resumo' => 'requiredstring|max:65535',
             'url' => 'required',
         ]);
 

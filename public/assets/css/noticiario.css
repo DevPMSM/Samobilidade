@@ -29,6 +29,7 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
 .card_container{
@@ -89,7 +90,12 @@ span{
     font-weight: 400;
     line-height: 34.09px;
     text-align: left;
-    
+
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical;  
 }
 
 @media (max-width: 1024px) {
@@ -125,6 +131,10 @@ span{
     }
     .card-body p {
         font-size: 20px;
+    }
+
+    .container {
+        height: 70%;
     }
 
     .card_container{
