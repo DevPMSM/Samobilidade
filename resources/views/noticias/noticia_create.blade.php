@@ -1,3 +1,5 @@
+
+
 <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
 <link rel="stylesheet" href="{{ asset ('assets/css/noticia.css') }}">
 
@@ -14,11 +16,11 @@
         <div class="divForm">
             <form class="form" action="{{ route('noticias.store')}}" method="post" id="noticiaForm" enctype="multipart/form-data">
                 @csrf
-                <input type="text" id="titulo" name="titulo" placeholder="Título"><br>
-                <input type="text" id="subtitulo" name="subtitulo" placeholder="Subtítulo"><br>
+                <input type="text" id="titulo" name="titulo" placeholder="Título" style="font-family: georgia; font-size: 24px"><br>
+                <input type="text" id="subtitulo" name="subtitulo" placeholder="Subtítulo" style="font-family: georgia; font-size: 24px"><br>
      
                 <!--<textarea name="texto" id="desc"></textarea>-->
-                <input type="text" id="desc" name="texto" placeholder="Descrição"><br>
+                <input type="text" id="desc" name="texto" placeholder="Descrição" style="font-family: georgia; font-size: 24px"><br>
 
                 <label for="imagem">
                     <div class="addImg">
