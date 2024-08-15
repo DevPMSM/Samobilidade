@@ -19,5 +19,12 @@ class DatabaseSeeder extends Seeder
             'role' => 'admin',
             'password' => 'secret',
         ]);
+
+        User::factory()->create([
+            'name' => 'editor',
+            'email' => 'editor@samobilidade.com',
+            'role' => 'editor',
+            'password' => 'secret',
+        ]);
     }
 }
