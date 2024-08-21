@@ -73,9 +73,13 @@ PARA NÃO QUEBRAR A TELA -->
                     </div>
                     <div class="section-noticias-carrossel" aria-label="Carrossel de notícias">
                         @foreach ($noticias as $noticia)
-                            <img class="carrossel-img" src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="img">
+                            <div class="carrossel-item">
+                                <img class="carrossel-img" src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="Noticia">
+                                <h1 class="carrossel-titulo">{{$noticia->titulo}}</h1>
+                            </div>
                         @endforeach
                     </div>
+
                 </section>
 
                 <div class="form-contact">
