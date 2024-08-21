@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
 .card_container {
@@ -129,6 +130,10 @@ body {
 
     .card-body p {
         font-size: 20px;
+    }
+
+    .container {
+        height: 70%;
     }
 
     .card_container {

@@ -50,15 +50,15 @@ Route::middleware(['auth', 'editor'])->group(function () {
 });
 
 //rotas de legislacao
-Route::middleware(['auth', 'editor'])->group(function () {
-    Route::get('/legislacoes', [LegislacaoController::class, 'index'])->name('legislacoes');
-    Route::get('/legislacao/create', [LegislacaoController::class, 'create'])->name('create_legislacao');
-    Route::get('/legislacao/{legislacoes}', [LegislacaoController::class, 'show'])->name('mostrar_legislacao');
-    Route::get('/legislacao/{legislacoes}/edit', [LegislacaoController::class, 'edit'])->name('editar_legislacao');
-    Route::post('/legislacao', [LegislacaoController::class, 'store'])->name('legislacoes.store');
-    Route::put('/legislacao/{legislacoes}', [LegislacaoController::class, 'update'])->name('legislacao.update');
-    Route::delete('/legislacao/{legislacoes}', [LegislacaoController::class, 'destroy'])->name('legislacao_destroy');
-});
+Route::get('/legislacoes-index', [LegislacaoController::class, 'index'])->name('legislacoes');
+Route::get('/legislacao/create', [LegislacaoController::class, 'create'])->name('create_legislacao');
+Route::get('/legislacao/{legislacoes}', [LegislacaoController::class, 'show'])->name('mostrar_legislacao');
+Route::get('/legislacao/{legislacoes}/edit', [LegislacaoController::class, 'edit'])->name('editar_legislacao');
+Route::post('/legislacao', [LegislacaoController::class, 'store'])->name('legislacoes.store');
+Route::put('/legislacao/{legislacoes}', [LegislacaoController::class, 'update'])->name('legislacao.update');
+Route::delete('/legislacao/{legislacoes}', [LegislacaoController::class, 'destroy'])->name('legislacao_destroy');
+
+Route::middleware(['auth', 'editor'])->group(function () {});
 
 // Rota admin
 Route::get('/admin/users', [AdminController::class, 'index'])->name('users.index')->middleware('auth');

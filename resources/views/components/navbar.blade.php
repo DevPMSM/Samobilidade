@@ -51,7 +51,7 @@
                 </li>
                 <li class="sidebar-item"><a href="/">Home</a></li>
                 <li class="sidebar-item"><a href="{{route('legislacoes')}}">Legislação</a></li>
-                <li class="sidebar-item"><a href="{{route('noticias')}}">Notícias</a></li>
+                <li class="sidebar-item"><a href="{{route('noticiario')}}">Notícias</a></li>
                 <li class="sidebar-item"><a href="#">Contato</a></li>
                 </ul>
                 <div class="sidebar-item login-sidebar-button">
