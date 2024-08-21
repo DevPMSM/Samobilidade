@@ -8,8 +8,7 @@
 
 <div class="container">
 
-    <div class="titulo">
-    
+    <div class="titulo">    
         <h1> Noticiário <span class="ponto">.</span> </h1>
         <br>
 
@@ -21,7 +20,7 @@
                 <img class="card-img" src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="img">
                 <div class="notBar">
                     <h2> {{$noticia->titulo}} </h2>
-                    <a href="{{route('mostrar_noticia', $noticia->id)}}" class="ir" target="_blank" >
+                    <a href="{{route('noticias.show', $noticia->id)}}" class="ir" target="_blank" >
                         <img src="{{asset('assets\img\ir.svg')}}" alt="ir" id="ir">
                     </a>
                 </div>

@@ -35,7 +35,7 @@ body {
 .card_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr 0fr);
-    gap: 20px;
+    gap: 1em;
     max-width: 100%;
     margin: 0;
 }
@@ -44,7 +44,6 @@ body {
     overflow: hidden;
     width: 100%;
     max-width: 700;
-    margin: 55px;
 
 }
 
@@ -91,7 +90,11 @@ body {
     line-height: 34.09px;
     text-align: left;
 
-}
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 
 @media (max-width: 1024px) {
     h1 {
@@ -151,4 +154,3 @@ body {
         margin: 15px;
     }
 
-}

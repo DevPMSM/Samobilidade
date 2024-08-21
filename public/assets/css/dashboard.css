@@ -19,3 +19,12 @@ main {
     font-family: "Lexend", sans-serif;
     gap: 1rem;
 }
+
+.logo_pref{
+    width: auto;
+    object-fit: contain;
+    justify-content: center;
+    align-content: center;
+    opacity: 15%;
+    z-index: -99;
+}
