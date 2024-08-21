@@ -46,111 +46,6 @@ main {
     gap: 1rem;
 }
 
-@media (min-width: 1440px) {
-    .section-header {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 1280px) {
-    .section-header {
-        max-width: 600px;
-    }
-}
-
-@media (min-width: 1280px) {
-    .section-header {
-        max-width: 800px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .section-header-title {
-        font-size: 3.0625rem !important;
-    }
-
-    .section-header-subtitle {
-        font-size: 1.5rem !important;
-    }
-
-    .section-header-description {
-        font-size: 1.2rem !important;
-    }
-}
-
-@media (max-width: 767px) {
-    .article {
-        flex-direction: column;
-        padding: 0 !important;
-    }
-
-    .section-header {
-        padding: 1rem 2rem !important;
-        padding-top: 0 !important;
-    }
-
-    .section-header-description {
-        padding-bottom: 2rem;
-    }
-
-    .section-header-img {
-        /* display: none; */
-        min-width: 300px !important;
-        max-width: 500px !important;
-        align-self: flex-end;
-    }
-
-    .section-legislacao {
-        flex-direction: column;
-    }
-
-    .section-legislacao-find {
-        width: 100% !important;
-    }
-
-    .section-legislacao-find {
-        width: 100% !important;
-    }
-
-    .section-legislacao-form {
-        width: 100% !important;
-    }
-
-    .section-legislacao-text {
-        width: 100% !important;
-    }
-
-    .form-contact-us-actions {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .form-contact-us-actions-data {
-        width: 100% !important;
-    }
-
-    .form-input {
-        width: 100% !important;
-    }
-
-    .form-title {
-        font-size: 3rem !important;
-    }
-
-    .form-fields-textarea {
-        height: 180px !important;
-    }
-
-    .form-contact-us-actions-text {
-        width: 100% !important;
-        gap: 2rem;
-    }
-
-    .form-input::placeholder {
-        font-size: 1.35rem !important;
-    }
-}
-
 .section-header-title {
     font-size: 4.0625rem;
 }
@@ -409,4 +304,128 @@ main {
 .form-button:hover {
     background-color: #08628b;
     transform: scale(1.02);
+}
+
+
+@media (min-width: 1440px) {
+    .section-header {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1280px) {
+    .section-header {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .section-header {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-header-title {
+        font-size: 3.0625rem !important;
+    }
+
+    .section-header-subtitle {
+        font-size: 1.5rem !important;
+    }
+
+    .section-header-description {
+        font-size: 1.2rem !important;
+    }
+
+    .section-noticias-title {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .article {
+        flex-direction: column;
+        padding: 0 !important;
+    }
+
+    .section-header {
+        padding: 1rem 2rem !important;
+    }
+
+    .section-header-description {
+        padding-bottom: 2rem;
+        font-size: 1.5rem !important;
+    }
+
+    .section-header-img {
+        /* display: none; */
+        min-width: 300px !important;
+        max-width: 500px !important;
+        align-self: flex-end;
+    }
+
+    .section-legislacao {
+        flex-direction: column;
+    }
+
+    .section-legislacao-title {
+        text-align: center;
+        padding-bottom: 3rem !important;
+    }
+
+    .section-legislacao-find {
+        width: 100% !important;
+    }
+
+    .section-legislacao-find {
+        width: 100% !important;
+    }
+
+    .section-legislacao-form {
+        width: 100% !important;
+    }
+
+    .section-legislacao-text {
+        width: 100% !important;
+    }
+
+    .section-noticias-title {
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+
+    .form-contact-us-actions {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form-contact-us-actions-data {
+        width: 100% !important;
+    }
+
+    .form-input {
+        width: 100% !important;
+    }
+
+    .form-title {
+        font-size: 3rem !important;
+    }
+
+    .form-fields-textarea {
+        height: 180px !important;
+    }
+
+    .form-contact-us-actions-text {
+        width: 100% !important;
+        gap: 2rem;
+    }
+
+    .form-input::placeholder {
+        font-size: 1.35rem !important;
+    }
+
+    .form-button {
+        padding: 1rem 2rem;
+    }
 }
