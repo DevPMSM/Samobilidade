@@ -17,7 +17,7 @@ PARA NÃO QUEBRAR A TELA -->
                     <h2>Seu perfil:</h2>
                 @endif
                 @foreach ($users as $user)
-                    <h3>{{ $user->name }}</h3>
+                        <li>{{ $user->name }}</li>
                 @endforeach
             </div>
         </main>

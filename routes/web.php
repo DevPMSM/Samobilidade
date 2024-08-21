@@ -3,14 +3,13 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LegislacaoController;
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\WelcomeController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // ROTA PAGINA INICIAL
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 // ROTA DASHBOARD DEPOIS DE LOGADO
 Route::get('/dashboard', function () {
@@ -39,8 +38,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 //rotas de noticias
+Route::get('/noticiario', [NoticiaController::class, 'noticiario'])->name('noticiario');
 Route::middleware(['auth', 'editor'])->group(function () {
-    Route::get('/noticiario', [NoticiaController::class, 'noticiario'])->name('noticiario');
     Route::get('/noticias', [NoticiaController::class, 'index'])->name('noticias');
     Route::get('/noticia/create', [NoticiaController::class, 'create'])->name('create_noticia');
     Route::get('/noticia/{noticias}', [NoticiaController::class, 'show'])->name('mostrar_noticia');

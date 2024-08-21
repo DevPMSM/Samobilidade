@@ -12,9 +12,9 @@
         </a>
         <nav class="navbar-actions">
             <ul class="navbar-list">
-                <li class="navbar-items"><a href="#">Home</a></li>
+                <li class="navbar-items"><a href="/">Home</a></li>
                 <li class="navbar-items"><a href="{{route('legislacoes')}}">Legislação</a></li>
-                <li class="navbar-items"><a href="{{route('noticias')}}">Notícias</a></li>
+                <li class="navbar-items"><a href="{{route('noticiario')}}">Notícias</a></li>
                 <li class="navbar-items"><a href="#">Contato</a></li>
             </ul>
         </nav>

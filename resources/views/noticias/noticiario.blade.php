@@ -10,7 +10,7 @@
 
     <div class="titulo">
     
-        <h1> Noticiário <span>.</span> </h1>
+        <h1> Noticiário <span class="ponto">.</span> </h1>
         <br>
 
     </div>
