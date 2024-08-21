@@ -11,7 +11,7 @@ class NoticiaController extends Controller
     public function noticiario()
     {
         $noticias = Noticia::all();
-        
+
         return view('noticias.noticiario', compact("noticias"))->with('noticias', $noticias);
     }
 
@@ -34,7 +34,7 @@ class NoticiaController extends Controller
         }
 
         $noticias = $query->paginate(5);
-    
+
 
         return view('noticias.noticia_index', compact("noticias"))->with('noticias', $noticias);
     }
@@ -44,7 +44,7 @@ class NoticiaController extends Controller
      */
     public function create()
     {
-        
+
         return view('noticias.noticia_create');
     }
 
@@ -53,15 +53,15 @@ class NoticiaController extends Controller
      */
 
     public function store(Request $request)
-    {   
+    {
         $request->validate([
             'titulo' => 'required|max:255',
             'subtitulo' => 'required|max:255',
             'texto' => 'required|string|max:4294967295',
-            'imagem' => 'required|image', 
+            'imagem' => 'required|image',
         ]);
 
-        $noticiaData = $request->all(); 
+        $noticiaData = $request->all();
 
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
             $imagem = $request->file('imagem');
@@ -71,8 +71,8 @@ class NoticiaController extends Controller
             $noticiaData['imagem'] = $imagemName; // Atualiza o nome da imagem no array de dados
         }
 
-        Noticia::create($noticiaData); 
-        return redirect()->route('noticias')->with('success', 'Noticia criada com sucesso.');
+        Noticia::create($noticiaData);
+        return redirect()->route('noticias.index')->with('success', 'Noticia criada com sucesso.');
     }
 
     /**
@@ -113,16 +113,16 @@ class NoticiaController extends Controller
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
             $imagem = $request->file('imagem');
             $imagemName = md5($imagem->getClientOriginalName() . strtotime("now") . "." . $imagem->getClientOriginalExtension());
-            
+
             $imagem->move(public_path('img/imagens'), $imagemName);
-    
+
             $noticiaData['imagem'] = $imagemName; // Adiciona a nova imagem aos dados
         }
 
 
         $noticia->update($noticiaData);
 
-        return redirect()->route('noticias')->with('success', 'noticia atualizada com sucesso');
+        return redirect()->route('noticias.index')->with('success', 'noticia atualizada com sucesso');
     }
 
     /**
@@ -133,12 +133,12 @@ class NoticiaController extends Controller
         $noticia = Noticia::find($id);
 
         if (!$noticia) {
-            return redirect()->route('noticias')->with('error', 'Noticia não encontrada.');
+            return redirect()->route('noticias.index')->with('error', 'Noticia não encontrada.');
         }
-    
+
         $noticia->delete();
 
-        return redirect()->route('noticias')->with('success','Noticia deletada com sucesso.');
-    
+        return redirect()->route('noticias.index')->with('success','Noticia deletada com sucesso.');
+
     }
 }

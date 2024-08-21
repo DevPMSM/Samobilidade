@@ -14,7 +14,7 @@
     <aside id="sidebar" class="sidebar">
         <div class="sidebar-container">
             <header class="sidebar-header">
-                <h1 class="sidebar-name-title">{{ $user->name }}</h1>
+                <h2 class="sidebar-name-title">Bem-Vindo(a) </h2>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button class="sidebar-btn" type="submit">
@@ -27,7 +27,7 @@
             <ul class="sidebar-table">
             @if(auth()->user()->hasRole('editor'))
                 <li class="sidebar-table-list">
-                    <a href="/noticias" class="sidebar-table-item">
+                    <a href="/noticias-index" class="sidebar-table-item">
                         <span class="material-symbols-outlined" style="font-size: 35px;">newspaper</span>
                         Notícias
                     </a>
@@ -54,7 +54,7 @@
                 Voltar
             </a>
         </aside>
-        
+
         <script>
     // EVENTO AO CLICAR NO BOTÃO DO MENU DA SIDEBAR
     document.addEventListener('DOMContentLoaded', function() {

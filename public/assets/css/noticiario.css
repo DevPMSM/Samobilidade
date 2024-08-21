@@ -15,7 +15,7 @@ body{
     max-width: 315px;
     height: auto;
     font-family: Georgia;
-    font-size: 5vw; 
+    font-size: 5vw;
     display: flex;
     margin-bottom: 50px;
     justify-content: center;
@@ -35,7 +35,7 @@ span{
 .card_container{
     display: grid;
     grid-template-columns: repeat(2, 1fr 0fr);
-    gap: 20px;
+    gap: 1em;
     max-width: 100%;
     margin: 0;
 }
@@ -44,7 +44,6 @@ span{
     overflow: hidden;
     width: 100%;
     max-width: 700;
-    margin: 55px;
 
 }
 
@@ -66,7 +65,7 @@ span{
     width: 30px;
 }
 
-.notBar h2 { 
+.notBar h2 {
     font-family: Georgia;
     font-size: 40px;
     font-weight: 700;
@@ -84,18 +83,18 @@ span{
 }
 
 
-.card-body p { 
+.card-body p {
     font-family: Georgia;
     font-size: 30px;
     font-weight: 400;
     line-height: 34.09px;
     text-align: left;
 
-    overflow: hidden; 
+    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5; 
-    -webkit-box-orient: vertical;  
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 @media (max-width: 1024px) {
@@ -142,7 +141,7 @@ span{
         flex-direction: column;
         margin: 10;
         max-width: 100%;
-        
+
     }
 
     .cards{
@@ -151,5 +150,5 @@ span{
         max-width: 330;
         margin: 15px;
     }
-    
+
 }

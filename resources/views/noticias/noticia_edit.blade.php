@@ -2,14 +2,14 @@
 <link rel="stylesheet" href="{{ asset ('assets/css/noticia.css') }}">
 
 <link href="https://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
-                
+
 
 <div class="container">
     <div class="cardAdd">
         <h1> Editar  </h1>
-        <hr> 
+        <hr>
         <div class="divForm">
-            <form class="form" action="{{route('noticia.update', $noticia->id) }}" method="post" id="noticiaForm" enctype="multipart/form-data">
+            <form class="form" action="{{route('noticias.update', $noticia->id) }}" method="post" id="noticiaForm" enctype="multipart/form-data">
             @csrf
             @method('PUT')
                 <input type="text" id="titulo" name="titulo" value="{{$noticia->titulo}}"><br>
@@ -38,7 +38,7 @@
                 <img src="{{asset('assets\img\edit.svg')}}" alt="Editar" id="editar">
             </button>
         </div>
-    
+
     </div>
 </div>
 
@@ -48,7 +48,7 @@
     document.getElementById('imagem').addEventListener('change', function() {
         const fileInput = this;
         const fileNameSpan = document.getElementById('file-name');
-        
+
         if (fileInput.files.length > 0) {
             fileNameSpan.textContent = fileInput.files[0].name;
         } else {

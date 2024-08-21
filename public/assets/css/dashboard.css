@@ -11,4 +11,15 @@ main {
     min-height: 100vh;
 }
 
-.dashboard {}
+.dashboard{
+    display: flex;
+}
+
+.logo_pref{
+    width: auto;
+    object-fit: contain;
+    justify-content: center;
+    align-content: center;
+    opacity: 15%;
+    z-index: -99;
+}
