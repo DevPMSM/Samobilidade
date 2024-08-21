@@ -2,14 +2,13 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LegislacaoController;
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\WelcomeController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-// Rota Página Inicial
-Route::get('/', function () {
-    return view('welcome');
-});
+// ROTA PAGINA INICIAL
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 // Rota da Dashboard após o Login
 Route::get('/dashboard', function () {

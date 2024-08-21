@@ -1,8 +1,8 @@
-body{
+body {
     padding: 40px;
 }
 
-.titulo{
+.titulo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,18 +21,18 @@ body{
     justify-content: center;
 }
 
-span{
-    color:#209DD5;
+.ponto {
+    color: #209DD5;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
 }
 
-.card_container{
+.card_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr 0fr);
     gap: 1em;
@@ -40,14 +40,14 @@ span{
     margin: 0;
 }
 
-.cards{
+.cards {
     overflow: hidden;
     width: 100%;
     max-width: 700;
 
 }
 
-.cards img{
+.cards img {
     width: 100%;
     object-fit: cover;
     height: auto;
@@ -55,13 +55,13 @@ span{
 }
 
 
-.notBar{
+.notBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#ir{
+#ir {
     width: 30px;
 }
 
@@ -75,7 +75,7 @@ span{
     padding: 25px 0 0 0;
 }
 
-.card-body{
+.card-body {
     display: flex;
     justify-content: left;
     padding-top: 30px;
@@ -95,15 +95,16 @@ span{
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
-}
 
 @media (max-width: 1024px) {
     h1 {
         font-size: 48px;
     }
+
     .notBar h2 {
         font-size: 32px;
     }
+
     .card-body p {
         font-size: 24px;
     }
@@ -114,10 +115,11 @@ span{
         font-size: 55px;
     }
 
-    .notBar{
+    .notBar {
         justify-content: space-between;
         align-items: center;
     }
+
     .notBar h2 {
         font-size: 30px;
         font-weight: 300;
@@ -125,9 +127,10 @@ span{
         padding: 15px 0 0 0;
     }
 
-    #ir{
+    #ir {
         width: 20px;
     }
+
     .card-body p {
         font-size: 20px;
     }
@@ -136,7 +139,7 @@ span{
         height: 70%;
     }
 
-    .card_container{
+    .card_container {
         display: flex;
         flex-direction: column;
         margin: 10;
@@ -144,11 +147,10 @@ span{
 
     }
 
-    .cards{
+    .cards {
         overflow: hidden;
         width: 100%;
         max-width: 330;
         margin: 15px;
     }
 
-}

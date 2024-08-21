@@ -17,13 +17,15 @@
     display: flex;
 }
 
-.footer-text p {
-    margin-left: 5px;
+.footer-text a {
     color: #21A2D9;
 }
 
-.footer-socials {
-    display: none;
+.footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
 }
 
 /* Media Queries */
@@ -46,10 +48,7 @@
     }
 
     .footer-actions {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
     }
 
     .footer-socials {

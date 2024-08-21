@@ -1,4 +1,5 @@
 /* ESTILIZAÇÃO DA TELA PRINCIPAL DO DASHBOARD ADMIN */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 main {
     display: flex;
@@ -11,8 +12,12 @@ main {
     min-height: 100vh;
 }
 
-.dashboard{
+.dashboard {
     display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: "Lexend", sans-serif;
+    gap: 1rem;
 }
 
 .logo_pref{
