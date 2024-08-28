@@ -67,7 +67,7 @@ class NoticiaController extends Controller
             $imagem = $request->file('imagem');
            // $imagemName = md5($imagem->getClientOriginalName() . strtotime("now") . "." . $imagem->getClientOriginalExtension());
             $imagemName = $imagem->hashName();
-            $imagem->move(storage_path('app/public/img'), $imagemName);
+            $imagem->move(public_path('img/imagens'), $imagemName);
             $noticiaData['imagem'] = $imagemName; // Atualiza o nome da imagem no array de dados
         }
 

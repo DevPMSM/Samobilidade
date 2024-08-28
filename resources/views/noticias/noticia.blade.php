@@ -10,7 +10,8 @@
 
 <div class="container">
     <h1> {{$noticia->titulo}} </h1>
-    <img src="{{asset('storage/img/'). '/' .$noticia->imagem}}">
+    <img src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="Noticia">
+
     <h3 style="padding:15px"> Data de publicação <span>{{$noticia->created_at}}</span> </h3>
 
     <h2> {{$noticia->subtitulo}} </h2>

@@ -13,9 +13,9 @@
         <nav class="navbar-actions">
             <ul class="navbar-list">
                 <li class="navbar-items"><a href="/">Home</a></li>
-                <li class="navbar-items"><a href="{{route('legislacoes')}}">Legislação</a></li>
+                <li class="navbar-items"><a href="#legislacao_section">Legislação</a></li>
                 <li class="navbar-items"><a href="{{route('noticias')}}">Notícias</a></li>
-                <li class="navbar-items"><a href="#">Contato</a></li>
+                <li class="navbar-items"><a href="#fale-conosco">Contato</a></li>
             </ul>
         </nav>
         <div class="navbar-button">
@@ -50,9 +50,9 @@
                     </span>
                 </li>
                 <li class="sidebar-item"><a href="/">Home</a></li>
-                <li class="sidebar-item"><a href="{{route('legislacoes')}}">Legislação</a></li>
                 <li class="sidebar-item"><a href="{{route('noticias')}}">Notícias</a></li>
-                <li class="sidebar-item"><a href="#">Contato</a></li>
+                <li class="navbar-items"><a href="#legislacao_section">Legislação</a></li>
+                <li class="navbar-items"><a href="#fale-conosco">Contato</a></li>
                 </ul>
                 <div class="sidebar-item login-sidebar-button">
                     <button class="navbar-login-button">
@@ -100,6 +100,29 @@
                 sidebar.classList.remove('active');
                 overlay.classList.remove('active');
             }
+        });
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const currentUrl = window.location.href.split('#')[0];
+
+                if (currentUrl.endsWith('/')) {
+                    // Se já estiver na página inicial
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                } else {
+                    // Se estiver em outra página, redirecione para a página inicial com a âncora
+                    window.location.href = '/' + targetId;
+                }
+            });
         });
     </script>
 </body>

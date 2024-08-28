@@ -3,15 +3,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}"> 
-    
+    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    
-    
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
     <title>@yield('title', 'Samobilidade')</title>
 </head>
 <!-- Remover comentarios antes de subir  -->
@@ -27,22 +31,22 @@ PARA NÃO QUEBRAR A TELA -->
                 <article class="article">
                     <header class="section-header">
                         <h1 class="section-header-title">
-                            Cidades mais inteligentes, Pessoas mais felizes<span style="color: #209DD5;">.</span>
+                            Cidades mais inteligentes, pessoas mais felizes<span style="color: #209DD5;">.</span>
                         </h1>
                         <h2 class="section-header-subtitle">Mobilidade urbana para todos.</h2>
                         <p class="section-header-description">
-                            O Plano de Mobilidade Urbana de São Mateus é um instrumento norteador de planejamento de ações 
-                            de curto, médio e longo prazo que tem como principal objetivo orientar para que as 
+                            O Plano de Mobilidade Urbana de São Mateus é um instrumento norteador de planejamento de ações
+                            de curto, médio e longo prazo que tem como principal objetivo orientar para que as
                             ações e investimentos estejam de acordo com a visão da cidade.
                         </p>
                     </header>
-                    
+
                     <figure class="section-header-img">
-                        <img src="/assets/img/Design.svg" alt="Ônibus representando o transporte público">
+                        <img src="/assets/img/transito.jpg" alt="Ônibus representando o transporte público">
                     </figure>
                 </article>
 
-                <section class="section-leg">
+                <section id="legislacao_section" class="section-leg">
                     <div class="section-legislacao">
                         <div class="section-legislacao-find">
                             <h2 class="section-legislacao-title">Busque aqui uma legislação</h2>
@@ -69,20 +73,21 @@ PARA NÃO QUEBRAR A TELA -->
                 <section class="section-noticias">
                     <div class="section-noticias-info">
                         <h2 class="section-noticias-title">Acompanhe as últimas notícias<span style="color: #209DD5;">.</span></h2>
-                        <a class="section-noticias-link" href="#" aria-label="Ver mais notícias">- Ver Mais -</a>
                     </div>
                     <div class="section-noticias-carrossel" aria-label="Carrossel de notícias">
                         @foreach ($noticias as $noticia)
+                        <a href="/noticia/{{$noticia->id}}">
                             <div class="carrossel-item">
                                 <img class="carrossel-img" src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="Noticia">
                                 <h1 class="carrossel-titulo">{{$noticia->titulo}}</h1>
                             </div>
+                        </a>
                         @endforeach
                     </div>
-
                 </section>
+                <a class="section-noticias-link" href="{{route('noticias')}}" aria-label="Ver mais notícias">VER MAIS</a>
 
-                <div class="form-contact">
+                <div id="fale-conosco" class="form-contact">
                     <form id="contact-form" class="form-contact-us">
                         <h1 class="form-title">Fale Conosco</h1>
                         <div class="form-contact-us-actions">
@@ -108,10 +113,15 @@ PARA NÃO QUEBRAR A TELA -->
 
     <script>
     $(document).ready(function(){
+
         $('.section-noticias-carrossel').slick({
             centerMode: true,
-            slidesToShow: 2,
-            dots: true, 
+            infinite: true,
+            slidesToShow: 3,
+            dots: true,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 5000,
             responsive: [
                 {
                     breakpoint: 768,
@@ -134,6 +144,7 @@ PARA NÃO QUEBRAR A TELA -->
             ]
         });
     });
+
 </script>
 
 <script>

@@ -5,21 +5,12 @@
 PARA NÃO QUEBRAR A TELA -->
 <body>
     <div class='container'>
-        <main>
+        <main class="main_dashboard" id="dashboardId">
             <!-- COMPONENTE SIDEBAR FICA COMO PRIMEIRO ITEM DESSA TELA -->
             @include('components/sidebar-admin')
             <!-- OS ITENS DA TELA DEVEM FICAR DENTRO DA DIV DASHBOARD -->
             <div class="dashboard">
                 <img class="logo_pref" src="{{asset('assets/img/logoPref.png')}}" alt="">
-                {{-- <h1>LOGADO</h1>
-                @if ($user->role === 'admin')
-                    <h2>Todos os usuários:</h2>
-                @else
-                    <h2>Seu perfil:</h2>
-                @endif
-                @foreach ($users as $user)
-                        <li>{{ $user->name }}</li>
-                @endforeach
             </div>
         </main>
         @include('components/footer')

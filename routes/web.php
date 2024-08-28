@@ -11,11 +11,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 // Rota da Dashboard após o Login
-Route::get('/dashboard', function () {
+Route::get('/dashboard', [NoticiaController::class, 'index'], function () {
     $user = Auth::user();
     $users = $user->role === 'admin' ? User::all() : collect([$user]);
 
-    return view('dashboard', [
+    return view('noticias.noticia_index', [
         'user' => $user,
         'users' => $users,
     ]);
