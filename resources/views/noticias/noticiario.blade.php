@@ -8,28 +8,23 @@
 
 <div class="container">
 
-    <div class="titulo">    
-        <h1> Noticiário <span class="ponto">.</span> </h1>
-        <br>
-
+    <div class="titulo">
+        <h1> Notícias</h1>
     </div>
 
     <div class="card_container">
         @foreach ($noticias as $noticia)
-            <div class="cards" >
-                <img class="card-img" src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="img">
-                <div class="notBar">
-                    <h2> {{$noticia->titulo}} </h2>
-                    <a href="{{route('noticias.show', $noticia->id)}}" class="ir" target="_blank" >
-                        <img src="{{asset('assets\img\ir.svg')}}" alt="ir" id="ir">
-                    </a>
+            <a href="{{route('noticias.show', $noticia->id)}}" class="ir" target="_blank" >
+                <div class="cards" >
+                    <img class="card-img" src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="img">
+                    <div class="notBar">
+                        <h2> {{$noticia->titulo}} </h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{$noticia->texto}}</p>
+                    </div>
                 </div>
-
-                <div class="card-body">
-                    <p class="card-text">{{$noticia->texto}}</p>
-                </div>
-            </div>
-            <br>
+            </a>
         @endforeach
     </div>
     @component('components.footer')

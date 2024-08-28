@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     list-style: none;
+    align-items: center;
     padding: 10px;
 }
 
@@ -18,22 +19,17 @@
 .pagination .page-link {
     width: 40px;
     height: 40px;
-    /*top: 2076px;
-    left: 848px;*/
-    
     border-radius: 10px;
     background: #209DD5;
     padding: 8px 18px;
-    display: flex;
     align-items: center;
-
     color: white;
     font-family: Georgia;
     font-size: 30px;
-    /*font-weight: 400;*/
     text-align: left;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .pagination .page-link .material-icons {
@@ -51,7 +47,7 @@
     background-color: #209DD5;
     color: white;
     border-color: #209DD5;
-  
+
 }
 
 /*.pagination .page-item.disabled .page-link {
