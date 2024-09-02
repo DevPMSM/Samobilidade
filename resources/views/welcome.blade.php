@@ -95,7 +95,7 @@ PARA NÃO QUEBRAR A TELA -->
                             <div class="form-contact-us-actions-data">
                                 <input class="form-input" value="{{ old('nome') }}" type="text" id="nome" name="nome" placeholder="Nome" required>
                                 <input class="form-input" value="{{ old('email') }}" type="email" id="email" name="email" placeholder="Email" required>
-                                <input class="form-input" value="{{ old('telefone') }}" type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+                                <input class="form-input" value="" type="text" id="telefone" name="telefone" placeholder="Telefone" required>
                                 <input class="form-input" value="{{ old('assunto') }}" type="text" id="assunto" name="assunto" placeholder="Assunto" required>
                             </div>
                             <div class="form-contact-us-actions-text">
@@ -113,6 +113,25 @@ PARA NÃO QUEBRAR A TELA -->
             </main>
         @include('components/footer')
     </div>
+    <script>
+        const telefoneInput = document.getElementById('telefone');
+
+        telefoneInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 0) {
+                value = '(' + value;
+            }
+            if (value.length > 3) {
+                value = value.slice(0, 3) + ') ' + value.slice(3);
+            }
+            if (value.length > 10) {
+                value = value.slice(0, 10) + '-' + value.slice(10, 14);
+            }
+            
+            e.target.value = value;
+        });
+    </script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
