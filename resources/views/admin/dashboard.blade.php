@@ -42,12 +42,12 @@
                                     <p>{{ $user->role }}</p>
                                 </div>
                                 <div class="botoes">
-                                    <a href="{{ route('users.show', $user->id) }}" target='_blank'>
+                                    <a href="{{ route('users.show', $user->id) }}">
                                         <span class="material-symbols-outlined">
                                             info
                                         </span>
                                     </a>
-                                    <a href="{{ route('users.edit', $user->id) }}" target='_blank'>
+                                    <a href="{{ route('users.edit', $user->id) }}">
                                         <span class="material-symbols-outlined">
                                             edit
                                         </span>

@@ -51,9 +51,9 @@ class AdminController extends Controller
 
     public function edit(int $id)
     {
-        $user = User::find($id);
+        $users = User::find($id);
 
-        return view('admin.edit_user', compact('user'));
+        return view('admin.edit_user', compact('users'));
     }
 
     public function update(Request $request, $id)
