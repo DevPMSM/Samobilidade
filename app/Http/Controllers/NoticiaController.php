@@ -52,28 +52,28 @@ class NoticiaController extends Controller
      * Store a newly created resource in storage.
      */
 
-    public function store(Request $request)
-    {
+     public function store(Request $request)
+     {
         $request->validate([
-            'titulo' => 'required|max:255',
-            'subtitulo' => 'required|max:255',
-            'texto' => 'required|string|max:4294967295',
+            'titulo' => 'required',
+            'subtitulo' => 'required',
+            'texto' => 'required|string',
             'imagem' => 'required|image',
         ]);
 
-        $noticiaData = $request->all();
+         $noticiaData = $request->all();
 
-        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
-            $imagem = $request->file('imagem');
-           // $imagemName = md5($imagem->getClientOriginalName() . strtotime("now") . "." . $imagem->getClientOriginalExtension());
-            $imagemName = $imagem->hashName();
-            $imagem->move(public_path('img/imagens'), $imagemName);
-            $noticiaData['imagem'] = $imagemName; // Atualiza o nome da imagem no array de dados
-        }
+         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+             $imagem = $request->file('imagem');
+             $imagemName = $imagem->hashName();
+             $imagem->move(public_path('img/imagens'), $imagemName);
+             $noticiaData['imagem'] = $imagemName; // Atualiza o nome da imagem no array de dados
+         }
 
-        Noticia::create($noticiaData);
-        return redirect()->route('noticias.index')->with('success', 'Noticia criada com sucesso.');
-    }
+         Noticia::create($noticiaData);
+         return redirect()->route('noticias.index')->with('success', 'Noticia criada com sucesso.');
+     }
+
 
     /**
      * Display the specified resource.

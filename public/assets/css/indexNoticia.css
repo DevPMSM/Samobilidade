@@ -1,5 +1,5 @@
-body {
-    font-family: Georgia, serif;
+body{
+    height: auto;
 }
 
 .noticias {
@@ -14,18 +14,17 @@ body {
     flex-direction: column;
 }
 
-
 .dashboard {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: auto;
 }
 
 .noticias h1 {
     width: 100%;
     max-width: 236px;
-    font-family: Georgia, serif;
     font-size: 43px;
     font-weight: 400;
     padding-top: 25px;
@@ -137,7 +136,6 @@ body {
 }
 
 .not p {
-    font-family: Georgia, serif;
     font-size: 1.5vw;
     font-weight: 400;
     text-align: left;
@@ -255,8 +253,21 @@ body {
     }
 
     .not p {
-        font-size: 24px;
+        font-size: 18px;
         margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .noticias h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .not p {
+        font-size: 14px;
+        margin-bottom: 8px;
     }
 
 }

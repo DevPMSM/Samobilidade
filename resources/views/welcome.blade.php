@@ -55,18 +55,27 @@ PARA NÃO QUEBRAR A TELA -->
                                 <select class="section-legislacao-select" name="legislacao" id="legislacao">
                                     <option value="" disabled selected>Selecione uma legislação</option>
                                     @foreach ($legislacoes as $legislacao)
-                                        <option value="{{ $legislacao->resumo }}">{{ $legislacao->titulo }}</option>
+                                        <option data-resumo="{{ $legislacao->resumo }}" data-url="{{ $legislacao->url }}">
+                                            {{ $legislacao->titulo }}
+                                        </option>
                                     @endforeach
                                 </select>
+
                                 <i><span class="material-symbols-outlined">keyboard_arrow_down</span></i>
                             </form>
                         </div>
                         <div class="section-legislacao-text">
                             <hr class="blue-bar" aria-hidden="true">
-                            <p class="section-legislacao-description" id="legislacao-resumo">
-                                Selecione uma legislação para ver o resumo aqui.
-                            </p>
+                            <div class="legislacao_index_container">
+                                <p class="section-legislacao-description" id="legislacao-resumo">
+                                    Selecione uma legislação para ver o resumo aqui.
+                                </p>
+                                <a class="section-legislacao-url" id="legislacao-url" href="#" target="_blank" style="display: none;">
+                                    Ver Lei
+                                </a>
+                            </div>
                         </div>
+
                     </div>
                 </section>
 
@@ -148,11 +157,28 @@ PARA NÃO QUEBRAR A TELA -->
 </script>
 
 <script>
-    // função para atualizar busca de legislação
     document.getElementById('legislacao').addEventListener('change', function() {
         const selectedOption = this.options[this.selectedIndex];
-        const resumo = selectedOption.value;
+
+        const resumo = selectedOption.dataset.resumo;
+        let url = selectedOption.dataset.url;
+
         document.getElementById('legislacao-resumo').textContent = resumo;
+
+        const linkElement = document.getElementById('legislacao-url');
+
+        if (url) {
+            if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                url = 'http://' + url;
+            }
+
+            linkElement.setAttribute('href', url);
+            linkElement.style.display = 'inline';
+        } else {
+            linkElement.style.display = 'none';
+        }
     });
+
+
 </script>
 </body>

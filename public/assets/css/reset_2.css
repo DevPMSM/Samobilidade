@@ -22,6 +22,7 @@ h4,
 h5,
 h6,
 p,
+blockquote,
 pre,
 a,
 abbr,
@@ -88,7 +89,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   vertical-align: baseline;
 }
 
@@ -110,12 +110,9 @@ section {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  font-family: "Exo 2", sans-serif;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1;
-}[class] {
-  list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
@@ -170,6 +167,7 @@ select {
   border-radius: 0;
 }
 
+
 /* Prevent text expansion in Safari */
 body {
   -webkit-text-size-adjust: 100%;
@@ -201,8 +199,4 @@ html {
 .ql-editor {
     font-weight: normal;
     font-style: normal;
-}
-
-main{
-    font-family: "Exo 2", sans-serif;
 }
