@@ -21,16 +21,10 @@ Route::get('/dashboard', [NoticiaController::class, 'index'], function () {
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-
-//Rotas paras páginas de visitante:
-Route::get('/noticias', [NoticiaController::class, 'noticiario'])->name('noticias');
-
-
 // Grupo de rotas para notícias (apenas para usuários autenticados com o papel de 'editor')
 Route::middleware(['auth', 'editor'])->group(function () {
     Route::get('/noticias-index', [NoticiaController::class, 'index'])->name('noticias.index');
     Route::get('/noticia/create', [NoticiaController::class, 'create'])->name('noticias.create');
-    Route::get('/noticia/{noticia}', [NoticiaController::class, 'show'])->name('noticias.show');
     Route::get('/noticia/{noticia}/edit', [NoticiaController::class, 'edit'])->name('noticias.edit');
     Route::post('/noticia', [NoticiaController::class, 'store'])->name('noticias.store');
     Route::put('/noticia/{noticia}', [NoticiaController::class, 'update'])->name('noticias.update');
@@ -58,6 +52,11 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/admin/users/{id}', [AdminController::class, 'update'])->name('users.update');
     Route::delete('/admin/users/{id}', [AdminController::class, 'destroy'])->name('users.destroy');
 });
+
+//Rotas paras páginas de visitante:
+Route::get('/noticias', [NoticiaController::class, 'noticiario'])->name('noticias');
+Route::get('/noticia/{noticia}', [NoticiaController::class, 'show'])->name('noticias.show');
+
 
 // Incluindo as rotas de autenticação geradas pelo Laravel
 require __DIR__.'/auth.php';

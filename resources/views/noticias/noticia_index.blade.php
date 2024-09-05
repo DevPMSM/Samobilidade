@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/indexNoticia.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/pagination.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>@yield('title', 'Samobilidade')</title>
 </head>
 
@@ -38,12 +39,12 @@
                                     <p>{{ $noticia->titulo }}</p>
                                 </div>
                                 <div class="botoes">
-                                    <a href="{{ route('noticias.show', $noticia->id) }}" target='_blank'>
+                                    <a href="{{ route('noticias.show', $noticia->id) }}">
                                         <span class="material-symbols-outlined">
                                             info
                                         </span>
                                     </a>
-                                    <a href="{{ route('noticias.edit', $noticia->id) }}" target='_blank'>
+                                    <a href="{{ route('noticias.edit', $noticia->id) }}">
                                         <span class="material-symbols-outlined">
                                             edit
                                         </span>

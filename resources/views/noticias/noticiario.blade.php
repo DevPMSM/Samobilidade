@@ -1,33 +1,48 @@
-<link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-<link rel="stylesheet" href="{{ asset ('assets/css/noticiario.css') }}">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notícias</title>
+    <!--Links-->
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/noticiario.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
 
-
-<link href="https://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
-
-@component('components.navbar') @endcomponent
-
-<div class="container">
-
-    <div class="titulo">
-        <h1> Notícias</h1>
-    </div>
-
-    <div class="card_container">
-        @foreach ($noticias as $noticia)
-            <a href="{{route('noticias.show', $noticia->id)}}" class="ir" target="_blank" >
-                <div class="cards" >
-                    <img class="card-img" src="{{asset('img/imagens/' . $noticia->imagem) }}" alt="img">
-                    <div class="notBar">
-                        <h2> {{$noticia->titulo}} </h2>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">{{$noticia->texto}}</p>
-                    </div>
-                </div>
-            </a>
-        @endforeach
-    </div>
-    @component('components.footer')
+<body>
+    @component('components.navbar')
     @endcomponent
-</div>
 
+    <div class="container">
+
+        <div class="titulo">
+            <h1> Notícias</h1>
+        </div>
+
+        <div class="card_container">
+            @foreach ($noticias as $noticia)
+                <div class="caixa_noticia">
+                    <a href="{{ route('noticias.show', $noticia->id) }}" class="cards">
+                        <div class="noticias_corpo">
+                            <div class="notBar">
+                                <h2> {{ $noticia->titulo }} </h2>
+                            </div>
+                            <div class="img_container_div">
+                                <img class="card-img" src="{{ asset('img/imagens/' . $noticia->imagem) }}" alt="img">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">{{ $noticia->subtitulo }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+        @component('components.footer')
+        @endcomponent
+    </div>
+</body>
+
+</html>
