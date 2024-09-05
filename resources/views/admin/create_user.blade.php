@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAINEL ADMIN</title>
+    
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+
+    <link rel="stylesheet" href="{{ asset ('assets/css/usuario.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>@yield('title', 'Samobilidade')</title>
 </head>
+
 <body>
     <h1>Painel Admin</h1>
     <h2>Criar novo Usuário</h2>

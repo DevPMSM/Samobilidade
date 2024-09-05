@@ -12,7 +12,6 @@
     <!-- Quill Editor CSS -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
-
 <body>
     <div class="container">
         <main class="noticias" id="dashboardId">
@@ -31,7 +30,6 @@
                             <div id="editor-container"></div>
                             <textarea name="texto" id="texto" style="display: none"></textarea>
                         </div>
-
                         <!-- Image Upload -->
                         <label class="imagem" for="imagem">
                             <div class="addImg" @required(true)>

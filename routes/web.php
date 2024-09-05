@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LegislacaoController;
 use App\Http\Controllers\NoticiaController;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 // ROTA PAGINA INICIAL
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::post('/', [WelcomeController::class, 'contato'])->name('site.contato');
 
 // Rota da Dashboard após o Login
 Route::get('/dashboard', [NoticiaController::class, 'index'], function () {
@@ -20,6 +22,9 @@ Route::get('/dashboard', [NoticiaController::class, 'index'], function () {
         'users' => $users,
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+//Rotas paras páginas de visitante:
+Route::get('/noticias', [NoticiaController::class, 'noticiario'])->name('noticias');
 
 // Grupo de rotas para notícias (apenas para usuários autenticados com o papel de 'editor')
 Route::middleware(['auth', 'editor'])->group(function () {

@@ -96,15 +96,16 @@ PARA NÃO QUEBRAR A TELA -->
                 </section>
                 <a class="section-noticias-link" href="{{route('noticias')}}" aria-label="Ver mais notícias">VER MAIS</a>
 
-                <div id="fale-conosco" class="form-contact">
-                    <form id="contact-form" class="form-contact-us">
+                <div class="form-contact">
+                    <form id="contact-form" class="form-contact-us" action={{ route('site.contato') }} method="post">
+                        @csrf
                         <h1 class="form-title">Fale Conosco</h1>
                         <div class="form-contact-us-actions">
                             <div class="form-contact-us-actions-data">
-                                <input class="form-input" type="text" id="nome" name="nome" placeholder="Nome" required>
-                                <input class="form-input" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
-                                <input class="form-input" type="text" id="contato" name="contato" placeholder="Contato" required>
-                                <input class="form-input" type="text" id="assunto" name="assunto" placeholder="Assunto" required>
+                                <input class="form-input" value="{{ old('nome') }}" type="text" id="nome" name="nome" placeholder="Nome" required>
+                                <input class="form-input" value="{{ old('email') }}" type="email" id="email" name="email" placeholder="Email" required>
+                                <input class="form-input" value="" type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+                                <input class="form-input" value="{{ old('assunto') }}" type="text" id="assunto" name="assunto" placeholder="Assunto" required>
                             </div>
                             <div class="form-contact-us-actions-text">
                                 <textarea class="form-fields-textarea" id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
@@ -113,9 +114,33 @@ PARA NÃO QUEBRAR A TELA -->
                         </div>
                     </form>
                 </div>
-        </main>
+                @foreach ($errors->all() as $error)
+                    <script>
+                        alert("{{ $error }}");
+                    </script>
+                @endforeach
+            </main>
         @include('components/footer')
     </div>
+    <script>
+        const telefoneInput = document.getElementById('telefone');
+
+        telefoneInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 0) {
+                value = '(' + value;
+            }
+            if (value.length > 3) {
+                value = value.slice(0, 3) + ') ' + value.slice(3);
+            }
+            if (value.length > 10) {
+                value = value.slice(0, 10) + '-' + value.slice(10, 14);
+            }
+            
+            e.target.value = value;
+        });
+    </script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
