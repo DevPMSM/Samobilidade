@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/indexLegislacao.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/pagination.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>@yield('title', 'Samobilidade')</title>
 </head>
 
@@ -36,14 +37,16 @@
                             <div class="not">
                                 <p>{{ $legislacao->titulo }}</p>
                                 <div class="botoes">
-                                    <a href="https://www.google.com/" target='_blank' >
+                                    <a href="{{$legislacao->url}}">
                                         <span class="material-symbols-outlined">
                                             info
-                                        </span>                                    </a>
-                                    <a href="{{route('legislacoes.edit', $legislacao->id)}}" target='_blank' >
+                                        </span>
+                                    </a>
+                                    <a href="{{route('legislacoes.edit', $legislacao->id)}}">
                                         <span class="material-symbols-outlined">
                                             edit
-                                        </span>                                    </a>
+                                        </span>
+                                    </a>
 
                                     <form action="{{ route('legislacoes.destroy', $legislacao->id) }}" method="POST" style="display:inline; margin: 0px;" >
                                         @csrf
@@ -51,7 +54,8 @@
                                         <button type="submit" style="background: none; border: none; cursor: pointer;">
                                             <span class="material-symbols-outlined">
                                                 close
-                                            </span>                                        </button>
+                                            </span>
+                                        </button>
                                     </form>
                                 </div>
                             </div>

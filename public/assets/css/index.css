@@ -6,12 +6,10 @@ body {
     margin: 0;
 }
 
-/* Garante que o contêiner principal ocupe pelo menos a altura da tela */
 .container {
     min-height: 100vh;
 }
 
-/* Garante que o conteúdo principal ocupe o espaço restante */
 main {
     flex: 1;
     display: flex;
@@ -170,7 +168,7 @@ main {
 
 /* noticias */
 .section-noticias {
-    padding: 7em 0 1em 0;
+    padding: 4em 0 1em 0;
     width: 100%;
     overflow: hidden;
     /* max-width: 1440px; */
@@ -232,8 +230,6 @@ main {
 }
 
 
-
-
 .section-noticias-carrossel {
     padding: 1rem 0;
     width: 100%;
@@ -247,7 +243,7 @@ main {
 
 .carrossel-item {
     position: relative;
-    background-image: linear-gradient(45deg, rgba(14, 153, 233, 0.815) 15%, rgba(82, 181, 238, 0.801) 50%);
+    background-image: linear-gradient(0deg, rgba(12, 124, 189, 0.925) 35% , rgba(82, 181, 238, 0.801) 100%);
     border-radius: 20px;
 }
 
@@ -255,12 +251,10 @@ main {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: white;
+    color:white;
     font-weight: 700;
-    font-size: 2.25rem;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #7473734a;
-    word-break: break-all;
+    font-size: 22px;
+    word-break: normal;
     padding: 10px;
     z-index: 10;
 }
@@ -272,7 +266,7 @@ main {
     display: block;
     height: auto;
     border-radius: 20px;
-    -webkit-mask-image: linear-gradient(to top, transparent 5%, black 70%);
+    -webkit-mask-image: linear-gradient(to top, transparent 2%, black 100%);
 }
 
 /* formulario fale conosco */
@@ -373,6 +367,17 @@ main {
     transition: ease-in-out 0.2s;
 }
 
+.legislacao_index_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.legislacao_index_container a{
+    padding-top: 5px;
+    font-weight: bold;
+    color: #209DD5;
+}
+
 .form-button:hover {
     background-color: #08628b;
     transform: scale(1.02);
@@ -451,10 +456,19 @@ main {
     .article {
         flex-direction: column;
         padding: 0 !important;
+        height: auto;
     }
 
     .section-header {
         padding: 1rem 2rem !important;
+    }
+
+    .section-noticias-title{
+        font-size: 1.5rem !important;
+    }
+
+    .form-title{
+        font-size: 1.5rem !important;
     }
 
     .section-header-description {

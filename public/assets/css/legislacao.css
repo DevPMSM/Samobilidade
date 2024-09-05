@@ -1,221 +1,227 @@
-.container {
+body{
+    font-family: "Exo 2", sans-serif;
+}
 
-
+.leis {
     display: flex;
+    align-items: flex-start;
+    flex: 1;
+    height: auto;
+}
+
+
+.linha {
+    width: 55% !important;
+}
+
+.lei_create {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    border-radius: 20px;
     justify-content: center;
-    margin: auto;
-    max-width: 1440px;
     width: 100%;
-
-   /* height: 1655;
-    top: -2512px;
-    left: 8649px;*/
-
-    padding: 100px; /*5%*/
+    height: 100vh;
 }
 
-.cardAdd {
-    margin: auto;
-    max-width: 1231px;
-    width: 100%;
-    /*top: 88px;
-    left: 105px;*/
-    border-radius: 20px 20px 20px 20px;
-    background: #F8F8F8;
-    box-shadow: 0px 4px 4px 0px #00000040;
-
+.form_container {
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 80%;
     padding: 20px;
+    height: 85%;
 }
 
-.container h1 {
-    margin: auto;
-    padding: 30px;
-
-   /* width: 287px;
-    height: 74px;
-    top: 208px;
-    left: 552px;*/;
-
-    font-family: Georgia;
-    font-size: 4vw;
+.leis h1 {
+    width: 100%;
+    max-width: 236px;
+    font-size: 43px;
     font-weight: 400;
-    line-height: 1.2;
+    padding-top: 25px;
     text-align: center;
-    color: #209DD5;
+    color: #000000;
 }
 
-hr {
-    margin-block-start: 30px;
+.line {
     max-width: 650px;
     width: 100%;
-
-   /* height: 0px;
-    top: 327px;
-    left: 371px;
-    gap: 0px;
-    opacity: 0px;*/
-    border: 1px 0px 0px 0px;
+    margin: 25px 0;
+    border: 1px solid #000;
 }
 
-.divForm {
+.form_busca {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    margin: 50px;
-
+    height: auto;
+    width: 25vw;
+    padding-bottom: 20px;
 }
 
-input {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 10px 10px 10px 10px;
+.form_busca span {
+    position: relative;
+    right: 30px;
+    color: darkgray;
     cursor: pointer;
 }
-
-input::placeholder {
-    padding: 10px;
-    /*width: 164px;
-    height: 39px;
-    top: 583px;
-    left: 235px;*/
-    font-family: Georgia;
-    font-size: 1.5em;
-    /*font-weight: 400;
-    line-height: 45.45px;*/
-    text-align: left;
-    color: #000;
-}
-
-.form {
-    width: 1016px;
-}
-
-#titulo, #resumo, #url, #desc {
-    width: 100%;
-    height: 94px;
-
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #000;
-    border-radius: 10px;
-    font-family: Georgia;
-}
-
-#desc {
-    height: 300px;
-}
-
-
 
 .nav {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-top: 150;
+    padding-top: 20px;
+    width: 85%;
 }
 
-#save, #edit {
-    width: 80px;
-    height: 70px;
-    /*top: 1291px;
-    left: 1246px;*/
-    padding: 8.33px 4.17px 8.33px 6.25px;
-    cursor: pointer;
-}
-
-#voltar {
-    width: 30px;
-    /* top: 1316px;
-    left: 165px;*/
-    border: 4px 4px 4px 4px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.voltar span {
-    /*    width: 113px;
-    height: 39px;
-    top: 1296px;
-    left: 180px;
-    */
-    font-family: Georgia;
-    font-size: 1.5em;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #209DD5;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.editar {
+#leiForm {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    padding-top: 35px;
 }
 
-.editar span {
-    /*width: 115px;
-    height: 39px;*/
+#leiForm input {
+    width: 85%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: none;
+}
 
-    font-family: Georgia;
-    font-size: 1.5em;
+#resumo {
+    width: 85%;
+    min-height: 15vh;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 2px solid black;
+    font-size: 1rem;
+    font-family: "Exo 2", sans-serif;
+    line-height: 1.5;
+    resize: vertical;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#resumo::placeholder {
+    color: darkgray;
+    font-size: 1rem;
     font-weight: 400;
-
-    /*text-align: left;*/
-    color: #209DD5;
-
-    cursor: pointer;
-
-}
-
-#editar {
-    width: 50px;
-    height: 50px;
-    /*  top: 1291px;
-    left: 1256px;*/
-    padding: 6.25px;
-
-    cursor: pointer;
-    display: inline-block;
 }
 
 
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 10%;
+input::placeholder{
+    color: darkgray;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.icon_span{
+    font-size: 1.5rem!important;
+    color: #209DD5!important;
+    padding-right: 5px!important;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .leis h1 {
+        font-size: 50px;
+        line-height: 60px;
     }
 
-    .container h1 {
-        font-size: 8vw;
+    .not p {
+        font-size: 30px;
+        padding: 0;
+        text-align: center;
     }
 
-    .nav {
+    .not {
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
+        align-content: center;
+        min-height: auto;
+        gap: 15px;
+        padding: 10px;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .container {
+    .botoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 15vw;
+        padding-right: 0px;
+        gap: 15px;
+    }
+
+    .botoes span {
+        background-color: #209DD5;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        font-size: 25px;
+    }
+
+    .utilitarios {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+
+    .allleis {
+        height: 100vh;
+    }
+
+    .form_busca {
         width: 100%;
     }
 
-    .container h1 {
-        font-size: 10vw;
+    .form_busca label {
+        position: relative;
+        width: 0;
+        height: 0;
+        top: -10px;
     }
 
-    .nav {
-        margin-top: 20px;
-    }
-
-    .nav #save, .nav #edit {
-        width: 100px;
-        height: 80px;
-    }
-
-    #voltar {
-        width: 50px;
+    #editor-container {
+        width: 90%;
     }
 }
+
+@media (max-width: 480px) {
+    .leis h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .not p {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-height: 700px) {
+    .botoes span {
+        font-size: 20px;
+        background-color: #209DD5;
+        padding: 8px;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .not {
+        padding: 5px;
+        min-height: 5vh;
+        margin: 0 0 5px 0;
+    }
+}
+
