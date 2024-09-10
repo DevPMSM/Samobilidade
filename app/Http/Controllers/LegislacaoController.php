@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Legislacao;
-
+use Illuminate\Http\Request;
 
 class LegislacaoController extends Controller
 {
@@ -16,7 +14,7 @@ class LegislacaoController extends Controller
     {
         $query = Legislacao::query();
         //busca por palavra chave
-        if($request->has('search')){
+        if ($request->has('search')) {
             $search = $request->get('search');
             $query->where('titulo', 'LIKE', "%$search%")
                 ->orWhere('resumo', 'LIKE', "%$search%");
@@ -24,7 +22,7 @@ class LegislacaoController extends Controller
 
         $legislacoes = $query->paginate(5);
 
-        return view('legislacoes.legislacao_index', compact("legislacoes"))->with('legislacoes', $legislacoes);
+        return view('legislacoes.legislacao_index', compact('legislacoes'))->with('legislacoes', $legislacoes);
     }
 
     /**
@@ -34,7 +32,6 @@ class LegislacaoController extends Controller
     {
         return view('legislacoes.legislacao_create');
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -48,6 +45,7 @@ class LegislacaoController extends Controller
         ]);
 
         Legislacao::create($request->all());
+
         return redirect()->route('legislacoes')->with('success', 'Legislação criada com sucesso.');
     }
 
@@ -57,6 +55,7 @@ class LegislacaoController extends Controller
     public function show(string $id)
     {
         $legislacao = Legislacao::find($id);
+
         return view('legislacoes.legislacao_edit', compact('legislacao'));
     }
 
@@ -69,6 +68,7 @@ class LegislacaoController extends Controller
 
         return view('legislacoes.legislacao_edit', compact('legislacao'));
     }
+
     /**
      * Update the specified resource in storage.
      */
@@ -76,13 +76,12 @@ class LegislacaoController extends Controller
     {
         $request->validate([
             'titulo' => 'required|max:255',
-            'resumo' => 'requiredstring|max:65535',
+            'resumo' => 'required|string|max:65535',
             'url' => 'required',
         ]);
 
         $legislacao = Legislacao::find($id);
         $legislacao->update($request->all());
-
 
         return redirect()->route('legislacoes')->with('success', 'Legislação atualizada com sucesso');
     }
@@ -94,12 +93,12 @@ class LegislacaoController extends Controller
     {
         $legislacao = Legislacao::find($id);
 
-        if (!$legislacao) {
+        if (! $legislacao) {
             return redirect()->route('legislacoes')->with('error', 'Legislação não encontrada.');
         }
-    
+
         $legislacao->delete();
 
-        return redirect()->route('legislacoes')->with('success','Legislação deletada com sucesso.');
+        return redirect()->route('legislacoes')->with('success', 'Legislação deletada com sucesso.');
     }
 }
