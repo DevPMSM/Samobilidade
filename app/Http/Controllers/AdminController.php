@@ -9,11 +9,22 @@ use Illuminate\Validation\Rule;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::all();
+        $query = User::query();
 
-        return view('admin.dashboard', compact('users'));
+        //busca por palavra chave
+        if($request->has('search')){
+            $search = $request->get('search');
+            $query->where('name', 'LIKE', "%$search%")
+                ->orWhere('role', 'LIKE', "%$search%")
+                ->orWhere('email', 'LIKE', "%$search%");
+        }
+
+        $users = $query->paginate(5);
+
+
+        return view('admin.dashboard', compact("users"))->with('users', $users);
     }
 
     public function create()
@@ -29,7 +40,7 @@ class AdminController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
-            'role' => ['required', Rule::in('editor')],
+            'role' => ['required'],
         ]);
 
         User::create([
@@ -63,7 +74,6 @@ class AdminController extends Controller
         $validatedData = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
-            'role' => ['required', Rule::in(['admin', 'editor'])],
         ]);
 
         $user->fill($validatedData);

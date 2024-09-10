@@ -43,8 +43,14 @@
                 @if (auth()->user()->hasRole('admin'))
                     <li class="sidebar-table-list">
                         <a href="/admin/users" class="sidebar-table-item">
-                            <span class="material-symbols-outlined" style="font-size: 35px;">balance</span>
+                            <span class="material-symbols-outlined" style="font-size: 35px;">group</span>
                             Usuarios
+                        </a>
+                    </li>
+                    <li class="sidebar-table-list">
+                        <a href="/" class="sidebar-table-item">
+                            <span class="material-symbols-outlined" style="font-size: 35px;">globe</span>
+                            Página Inicial
                         </a>
                     </li>
                 @endif

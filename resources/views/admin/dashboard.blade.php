@@ -2,11 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-
     <link rel="stylesheet" href="{{ asset('assets/css/indexUser.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/pagination.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>@yield('title', 'Samobilidade')</title>
 </head>
 
@@ -15,7 +15,7 @@
         <main class="usuarios" id="dashboardId">
             @include('components/sidebar-admin')
             <div class="dashboard">
-                <h1> Usuários </h1>
+                <h1> Administrador </h1>
                 <hr class="line">
                 <div class="utilitarios">
                     <a href="{{ route('users.create') }}" id="add">
@@ -66,7 +66,28 @@
                             </div>
                         @endforeach
                     </div>
-                    
+                    <div class = "navegar">
+                        @if ($users->lastPage() > 1)
+                            <ul class="pagination">
+                                <li class="page-item {{ $users->onFirstPage() ? ' disabled' : '' }}">
+                                    <a class="antes" href="{{ $users->previousPageUrl() }}" aria-label="Anterior">
+                                        <span class="material-icons">chevron_left</span>
+                                    </a>
+                                </li>
+
+                                @for ($page = max(1, $users->currentPage() - 2); $page <= min($users->lastPage(), $users->currentPage() + 2); $page++)
+                                    <li class="page-item {{ $page == $users->currentPage() ? 'active' : '' }}">
+                                        <a class="page-link" href="{{ $users->url($page) }}">{{ $page }}</a>
+                                    </li>
+                                @endfor
+
+                                <li class="page-item {{ $users->currentPage() == $users->lastPage() ? ' disabled' : '' }}">
+                                    <a class="prox" href="{{ $users->nextPageUrl() }}" aria-label="Próximo">
+                                        <span class="material-icons">chevron_right</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        @endif
                     </div>
                 </div>
             </div>

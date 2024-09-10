@@ -42,17 +42,14 @@
         <nav class="sidebar-nav">
             <ul class="sidebar-list">
                 <li class="sidebar-item-close">
-                    <a class="sidebar-logo" href="/">
-                        <img src="{{ asset('assets/img/onibus.svg') }}" alt="Logo Samobilidade">
-                    </a>
                     <span id="close-btn" style="font-size: 40px;" class="material-symbols-outlined">
                     close
                     </span>
                 </li>
                 <li class="sidebar-item"><a href="/">Home</a></li>
                 <li class="sidebar-item"><a href="{{route('noticias')}}">Notícias</a></li>
-                <li class="navbar-items"><a href="#legislacao_section">Legislação</a></li>
-                <li class="navbar-items"><a href="#fale-conosco">Contato</a></li>
+                <li class="sidebar-item navbar-items"><a href="#legislacao_section">Legislação</a></li>
+                <li class="sidebar-item navbar-items"><a href="#fale-conosco">Contato</a></li>
                 </ul>
                 <div class="sidebar-item login-sidebar-button">
                     <button class="navbar-login-button">
