@@ -160,7 +160,6 @@ main {
     font-size: 1.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 10;
-    line-height: 40px;
     overflow: hidden;
     -webkit-box-orient: vertical;
     word-break: normal;
@@ -436,7 +435,7 @@ main {
 
 @media (max-width: 1024px) {
     .section-header-title {
-        font-size: 3.0625rem !important;
+        font-size: 2rem !important;
     }
 
     .section-header-subtitle {
@@ -487,7 +486,12 @@ main {
         flex-direction: column;
     }
 
+    .section-legislacao-description{
+        font-size: 1.3rem;
+    }
+
     .section-legislacao-title {
+        font-size: 1.8rem;
         text-align: center;
         padding-bottom: 3rem !important;
     }
@@ -545,5 +549,9 @@ main {
 
     .form-button {
         padding: 1rem 2rem;
+    }
+
+    .form-title{
+        font-size: 2rem!important;
     }
 }

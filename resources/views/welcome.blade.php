@@ -127,7 +127,7 @@ PARA NÃO QUEBRAR A TELA -->
 
         telefoneInput.addEventListener('input', function (e) {
             let value = e.target.value.replace(/\D/g, '');
-            
+
             if (value.length > 0) {
                 value = '(' + value;
             }
@@ -137,7 +137,7 @@ PARA NÃO QUEBRAR A TELA -->
             if (value.length > 10) {
                 value = value.slice(0, 10) + '-' + value.slice(10, 14);
             }
-            
+
             e.target.value = value;
         });
     </script>

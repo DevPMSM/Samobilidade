@@ -1,0 +1,122 @@
+.users {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    height: auto;
+}
+
+.linha {
+    width: 55% !important;
+}
+
+.user_create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.form_container {
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 80%;
+}
+
+.users h1 {
+    width: 100%;
+    max-width: 236px;
+    font-size: 43px;
+    font-weight: 400;
+    padding-top: 25px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 25px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px;
+    width: 90%;
+}
+
+#userForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 35px;
+}
+
+#userForm input {
+    width: 85%;
+    height: 6vh;
+    border-radius: 20px;
+    padding: 15px;
+    line-break: normal;
+}
+
+input::placeholder {
+    color: darkgray;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.select_role_div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 6vh;
+    border-radius: 20px;
+    padding: 15px 0 15px 0;
+    line-break: normal;
+}
+
+.select_role{
+    width: 85%;
+    height: 6vh;
+    border-radius: 20px;
+    padding: 0 15px 0 15px;
+    line-break: normal;
+    color: darkgray;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 2px solid #000;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .users h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .users h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-height: 700px) {
+    .botoes span {
+        font-size: 20px;
+        background-color: #209DD5;
+        padding: 8px;
+        border-radius: 10px;
+        color: white;
+    }
+}

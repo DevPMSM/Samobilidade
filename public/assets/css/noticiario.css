@@ -54,6 +54,7 @@ body {
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
+    word-break:normal;
     line-height: 45.45px;
     color: #209DD5;
 }
@@ -119,7 +120,12 @@ body {
         font-size: 20px;
     }
 
-    .cards {
-        flex: 0 1 100%; /* Para mobile: 1 card por linha */
+    .caixa_noticia {
+        flex: 0 1 80%; /* Para mobile: 1 card por linha */
+        max-width: 80%;
+    }
+
+    .noticias_corpo{
+        width: 100%;
     }
 }
