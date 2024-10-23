@@ -47,6 +47,7 @@
                                             info
                                         </span>
                                     </a>
+                                    @if($user->id !== $loggedInUserId)
                                     <a href="{{ route('users.edit', $user->id) }}">
                                         <span class="material-symbols-outlined">
                                             edit
@@ -62,6 +63,7 @@
                                             </span>
                                         </button>
                                     </form>
+                                    @endif
                                 </div>
                             </div>
                         @endforeach

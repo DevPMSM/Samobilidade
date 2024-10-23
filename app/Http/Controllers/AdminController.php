@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 
@@ -14,7 +15,7 @@ class AdminController extends Controller
         $query = User::query();
 
         //busca por palavra chave
-        if($request->has('search')){
+        if ($request->has('search')) {
             $search = $request->get('search');
             $query->where('name', 'LIKE', "%$search%")
                 ->orWhere('role', 'LIKE', "%$search%")
@@ -23,8 +24,9 @@ class AdminController extends Controller
 
         $users = $query->paginate(5);
 
+        $loggedInUserId = Auth::id();
 
-        return view('admin.dashboard', compact("users"))->with('users', $users);
+        return view('admin.dashboard', compact('users', 'loggedInUserId'))->with('users', $users);
     }
 
     public function create()

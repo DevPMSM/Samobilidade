@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/usuario.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Adicionar</title>
+    <title>Editar</title>
     <!-- Quill Editor CSS -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
@@ -17,7 +17,7 @@
             @include('components/sidebar-admin')
             <div class="user_create">
                 <div class="form_container">
-                    <h1>Adicionar</h1>
+                    <h1>Editar</h1>
                     <hr class="linha">
                     <form class="form" action="{{route('users.update', $users->id) }}" method="post" id="userForm" enctype="multipart/form-data">
                         @csrf
