@@ -40,9 +40,9 @@
                 </div>
             @endforeach
         </div>
-        @component('components.footer')
-        @endcomponent
     </div>
+    @component('components.footer')
+    @endcomponent
 </body>
 
 </html>

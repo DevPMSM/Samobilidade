@@ -2,7 +2,7 @@ body {
     padding: 40px;
 }
 
-.titulo{
+.titulo {
     font-size: 3vw;
     font-weight: bold;
 }
@@ -11,10 +11,11 @@ body {
     color: #209DD5;
 }
 
-.container{
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 80vh;
 }
 
 .card_container {
@@ -27,24 +28,24 @@ body {
     gap: 40px;
 }
 
-.cards:hover{
+.cards:hover {
     background-color: rgba(245, 244, 244, 0.808);
     transition: 0.5s;
 }
 
-.img_container_div{
+.img_container_div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
 }
 
-.noticias_corpo{
+.noticias_corpo {
     width: 25vw;
     height: 100%;
 }
 
-.card-img{
+.card-img {
     object-fit: cover;
     aspect-ratio: 16/9;
 }
@@ -54,20 +55,23 @@ body {
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    word-break:normal;
+    word-break: normal;
     line-height: 45.45px;
     color: #209DD5;
 }
 
-.card-body{
+.card-body {
     font-size: 1.3rem;
     font-weight: 400;
     line-height: 34.09px;
-    max-height: 144px; /* Ajuste conforme necessário (linha + padding) */
+    max-height: 144px;
+    /* Ajuste conforme necessário (linha + padding) */
     overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona "..." no final do texto */
+    text-overflow: ellipsis;
+    /* Adiciona "..." no final do texto */
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* Número máximo de linhas */
+    -webkit-line-clamp: 4;
+    /* Número máximo de linhas */
     -webkit-box-orient: vertical;
     text-align: justify;
 }
@@ -84,8 +88,8 @@ body {
     border-radius: 10px;
     height: 100%;
     padding: 5px;
-    border-style: solid!important;
-    border-color: black!important;
+    border-style: solid !important;
+    border-color: black !important;
     transition: 0.5s;
 }
 
@@ -100,7 +104,7 @@ body {
         font-size: 32px;
     }
 
-    .card-body  {
+    .card-body {
         font-size: 24px;
     }
 }
@@ -116,16 +120,17 @@ body {
         line-height: 30px;
     }
 
-    .card-body  {
+    .card-body {
         font-size: 20px;
     }
 
     .caixa_noticia {
-        flex: 0 1 80%; /* Para mobile: 1 card por linha */
+        flex: 0 1 80%;
+        /* Para mobile: 1 card por linha */
         max-width: 80%;
     }
 
-    .noticias_corpo{
+    .noticias_corpo {
         width: 100%;
     }
 }

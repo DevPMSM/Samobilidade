@@ -94,9 +94,9 @@ PARA NÃO QUEBRAR A TELA -->
                         @endforeach
                     </div>
                 </section>
-                <a class="section-noticias-link" href="{{route('noticias')}}" aria-label="Ver mais notícias">VER MAIS</a>
+                <a id="ver-mais-noticias" class="section-noticias-link" href="{{route('noticias')}}" aria-label="Ver mais notícias">VER MAIS</a>
 
-                <div class="form-contact">
+                <div class="form-contact" id="fale-conosco">
                     <form id="contact-form" class="form-contact-us" action={{ route('site.contato') }} method="post">
                         @csrf
                         <h1 class="form-title">Fale Conosco</h1>
@@ -140,6 +140,16 @@ PARA NÃO QUEBRAR A TELA -->
 
             e.target.value = value;
         });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const botaoVerMais = document.getElementById('ver-mais-noticias');
+        const carrosselItems = document.querySelectorAll('.carrossel-item');
+
+        if (carrosselItems.length < 3) {
+            botaoVerMais.style.display = 'none';
+        }
+    });
+
     </script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -149,7 +159,7 @@ PARA NÃO QUEBRAR A TELA -->
     $(document).ready(function(){
 
         $('.section-noticias-carrossel').slick({
-            centerMode: true,
+            centerMode: false,
             infinite: true,
             slidesToShow: 3,
             dots: true,

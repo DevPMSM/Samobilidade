@@ -43,8 +43,8 @@
                                     <span id="file-name">{{$noticia->imagem}}</span>
                                 </div>
                             </label>
-                            <span>Imagem Selecionada:
-                                <a href="{{asset('img/imagens').'/'.$noticia->imagem}}" class=" d-flex justify-content-center" target="_blank">{{$noticia->imagem}}</a>
+                            <span style="margin-top:10px;">Preview da Imagem Selecionada:
+                                <a href="{{asset('img/imagens').'/'.$noticia->imagem}}" style="text-decoration: underline; color:blue; " class=" d-flex justify-content-center" target="_blank">{{$noticia->imagem}}</a>
                             </span>
                         @endif
                     </form>
