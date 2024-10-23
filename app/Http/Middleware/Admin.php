@@ -20,6 +20,15 @@ class Admin
             return redirect('/dashboard');
         }
 
+        $loggedInUserId = Auth::id();
+        $userId = $request->route('user');
+
+        if ($userId == $loggedInUserId) {
+            session()->flash('error', 'Você não pode editar seu próprio usuário.');
+
+            return redirect()->route('dashboard');
+        }
+
         return $next($request);
     }
 }

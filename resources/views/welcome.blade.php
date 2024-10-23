@@ -83,6 +83,7 @@ PARA NÃO QUEBRAR A TELA -->
                     <div class="section-noticias-info">
                         <h2 class="section-noticias-title">Acompanhe as últimas notícias<span style="color: #209DD5;">.</span></h2>
                     </div>
+                    <img src="{{asset('assets/img/__.jpeg')}}" alt="??" style="display:none">
                     <div class="section-noticias-carrossel" aria-label="Carrossel de notícias">
                         @foreach ($noticias as $noticia)
                         <a href="/noticia/{{$noticia->id}}">
