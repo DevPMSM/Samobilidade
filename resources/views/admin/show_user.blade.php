@@ -1,34 +1,36 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}"> -->
-
-    <link rel="stylesheet" href="{{ asset ('assets/css/usuario.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/usuario.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>@yield('title', 'Samobilidade')</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Usuario</title>
+    <!-- Quill Editor CSS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Painel Admin</h1>
-    <h2>Detalhes do Usuario</h2>
-
-    <div>
-        <p><strong>Name:</strong> {{ $user->name }}</p>
-        <p><strong>Email:</strong> {{ $user->email }}</p>
-        <p><strong>Cargo:</strong> {{ ucfirst($user->role) }}</p>
-        <p><strong>Criado em:</strong> {{ $user->created_at->format('d/m/Y H:i:s') }}</p>
-        <p><strong>Last Updated:</strong> {{ $user->updated_at->format('d/m/Y H:i:s') }}</p>
-    </div>
-
-    <div>
-        <a href="{{ route('users.edit', $user->id) }}">Editar Usuario</a>
-        <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
-            @csrf
-            @method('DELETE')
-            <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')">Delete User</button>
-        </form>
-        <a href="{{ route('users.index') }}">Voltar a lista de Usuarios</a>
+    <div class="container">
+        <main class="users" id="dashboardId">
+            @include('components/sidebar-admin')
+            <div class="user_create">
+                <div class="form_container">
+                    <h1>Usuario</h1>
+                    <hr class="linha">
+                            <input type="text" id="name" name="name" placeholder="Nome" maxlength="100" value="{{$user->name}}" readonly><br>
+                            <input type="email" id="email" name="email" placeholder="Email" maxlength="100" value="{{$user->email}}" readonly><br>
+                            <input type="password" id="password" name="password" placeholder="Senha" maxlength="100" value="{{$user->password}}" readonly><br>
+                    <div class="nav">
+                        <a href="/admin/users">
+                            <img src="{{asset('assets/img/voltar.svg')}}" alt="Voltar" id="voltar">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @include('components/footer')
     </div>
 </body>
 </html>
