@@ -23,7 +23,8 @@
                     <form class="form" action="{{ route('noticias.store')}}" method="post" id="noticiaForm" enctype="multipart/form-data">
                         @csrf
                         <input type="text" id="titulo" name="titulo" placeholder="Título"  maxlength="100" required ><br>
-                        <input type="text" id="subtitulo" name="subtitulo" placeholder="Subtítulo"   maxlength="200" required><br>
+                        <input type="text" id="subtitulo" name="subtitulo" placeholder="Subtítulo"  maxlength="200" required><br>
+                        <input type="text" id="categoria" name="categoria" placeholder="Categoria"  maxlength="200" required><br>
 
                         <div class="quill_container">
                             <!-- Quill Editor Container -->

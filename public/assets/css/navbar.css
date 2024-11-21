@@ -190,7 +190,7 @@
 /* Media Queries */
 @media (max-width: 1024px) {
     .navbar-button {
-        max-width: 90px;
+        max-width: 120px;
     }
 
     .navbar-login-button {
@@ -207,6 +207,7 @@
     .navbar-logo {
         width: 135px;
     }
+
 
     .navbar-actions,
     .navbar-button {

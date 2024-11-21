@@ -18,14 +18,9 @@
 
     <title>@yield('title', 'Samobilidade')</title>
 </head>
-<!-- Remover comentarios antes de subir  -->
-<!-- HTML BASE PARA A TELA PRINCIPAL, A ESTRUTURA SEGUE ESSES PADRÕES
-PARA NÃO QUEBRAR A TELA -->
 <body>
     <div class="container">
         @include('components/navbar')
-        <!-- NORMALMENTE O CONTEUDO DA PAGINA VAI SER COLOCADO DENTRO
-        DA MAIN PARA SER MOSTRADO E SE PRECISAR DE OUTRO ITEM, NO COMPONENTE -->
         <main>
             @yield('content')
                 <article class="article">
