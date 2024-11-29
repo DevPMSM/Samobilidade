@@ -19,6 +19,20 @@
 
         <div class="titulo">
             <h1> Notícias</h1>
+            <div class="container-categorias">
+            <div class="dropdown">
+            <span class="material-symbols-outlined">
+            lists
+            </span>
+                <div class="dropdown-menu">
+                    @foreach ($noticias as $noticia)
+                    <a href="{{ route('noticias.categorias', $noticia->categoria) }}" >
+                        {{ $noticia->categoria }}
+                    </a>
+                    @endforeach
+                </div>
+            </div>
+            </div>
         </div>
 
         <div class="card_container">
