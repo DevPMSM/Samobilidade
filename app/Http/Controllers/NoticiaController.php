@@ -140,4 +140,12 @@ class NoticiaController extends Controller
         return redirect()->route('noticias.index')->with('success', 'Noticia deletada com sucesso.');
 
     }
+
+    public function categorias($categoria)
+    {
+        // Busca todas as notícias que pertencem à categoria informada
+        $noticias = Noticia::where('categoria', $categoria)->get();
+
+        return view('noticias.noticias_categorias', compact('noticias', 'categoria'));
+    }
 }
