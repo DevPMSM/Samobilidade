@@ -18,6 +18,7 @@
 
         <div class="container">
             <h1 class="titulo"> {{$noticia->titulo}} </h1>
+            <h1 class="categoria"> {{$noticia->categoria}} </h1>
             <h3 class="data_publi">Data de publicação <span>{{$noticia->created_at}}</span> </h3>
             <img class="img_noticia" src="{{asset('img/imagens/' . $noticia->imagem)}}" alt="Noticia">
             <!-- Exibe o conteúdo da notícia com formatação HTML -->

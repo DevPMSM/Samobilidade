@@ -61,7 +61,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 //Rotas paras páginas de visitante:
 Route::get('/noticias', [NoticiaController::class, 'noticiario'])->name('noticias');
 Route::get('/noticia/{noticia}', [NoticiaController::class, 'show'])->name('noticias.show');
-
+Route::get('/noticiario/{categoria}/', [NoticiaController::class, 'categorias'])->name('noticias.categorias');
 
 // Incluindo as rotas de autenticação geradas pelo Laravel
 require __DIR__.'/auth.php';

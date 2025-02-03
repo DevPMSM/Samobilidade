@@ -259,6 +259,18 @@ main {
     z-index: 10;
 }
 
+.carrosel-categoria {
+    color: blue;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    word-break: normal;
+    padding: 10px;
+    z-index: 10;
+}
+
 .carrossel-img {
     width: 100%;
     object-fit: cover;

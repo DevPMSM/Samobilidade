@@ -17,6 +17,7 @@ return new class extends Migration
             $table->longText('subtitulo');
             $table->longText('texto');
             $table->string('imagem');
+            $table->string('categoria');
             $table->timestamps();
         });
     }
